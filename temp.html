@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ro" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecția 1</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"
+    />
+    <link rel="stylesheet" href="./lectia-1.css" />
+  </head>
+  <body>
+    <audio id="backgroundMusic" loop>
+      <source
+        src="../../assets/music/Traditional gregorian chant - O filii et filiae.mp3"
+        type="audio/mp3"
+      />
+    </audio>
+    <div class="app-container">
+      <!-- Ecran de start -->
+      <div id="error-container" class="hidden"></div>
+      <div class="welcome-screen">
+        <button class="start-btn">Începe lecția</button>
+      </div>
+
+      <!-- Ecran cu titlu mare -->
+      <div class="title-screen hidden">
+        <div class="title-wrapper">
+          <h1 class="title"></h1>
+        </div>
+      </div>
+
+      <!-- Bara de navigație -->
+      <div class="nav-bar hidden">
+        <h1 class="nav-title"></h1>
+      </div>
+
+      <!-- Vizualizare teleprompter -->
+      <div class="teleprompter-view hidden">
+        <div class="content-container">
+          <!-- Adam și Eva -->
+          <h2 class="subtitle">Adam și Eva</h2>
+          <div class="paragraph">
+            Adam și Eva sunt primii oameni creați de Dumnezeu, conform tradiției
+            iudeo-creștine. Ei reprezintă începutul umanității și primul
+            legământ cu Dumnezeu. Povestea lor în Grădina Edenului și căderea în
+            păcat au influențat fundamental înțelegerea naturii umane și a
+            relației dintre om și divinitate.
+          </div>
+          <img
+            src="assets/lectia-1/Adam_si_Eva.jpg"
+            alt="Adam și Eva"
+            class="figure-image"
+          />
+
+          <!-- Noe -->
+          <h2 class="subtitle">Noe</h2>
+          <div class="paragraph">
+            Noe a fost ales de Dumnezeu pentru a salva omenirea și viețuitoarele
+            de potopul universal. Credința și ascultarea sa l-au făcut să
+            construiască arca conform instrucțiunilor divine, devenind astfel un
+            simbol al speranței și al unui nou început pentru omenire.
+          </div>
+          <img src="assets/lectia-1/Noe.jpg" alt="Noe" class="figure-image" />
+
+          <!-- Others will be added here.. -->
+        </div>
+      </div>
+      <!-- Selector student -->
+      <div class="student-selector hidden">
+        <div
+          class="student-card"
+          data-tooltip="Apasă tasta 'e' sau ➔ pentru a alege următorul elev"
+        >
+          <div class="student-name"></div>
+        </div>
+      </div>
+
+      <!-- Controale laterale -->
+      <div class="side-controls left hidden">
+        <button
+          class="control-btn"
+          id="speed-down"
+          data-tooltip="Micșorează viteza de redare"
+        >
+          <i data-lucide="rewind"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="play-pause"
+          data-tooltip="Pornește/Pauză"
+        >
+          <i data-lucide="play"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="speed-up"
+          data-tooltip="Mărește viteza de redare"
+        >
+          <i data-lucide="fast-forward"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="sound-toggle"
+          data-tooltip="Oprește sunetul (M)"
+        >
+          <i data-lucide="volume-2"></i>
+        </button>
+      </div>
+
+      <div class="side-controls right">
+        <button class="control-btn" id="zoom-in" data-tooltip="Mărește textul">
+          <i data-lucide="zoom-in"></i>
+        </button>
+        <button class="theme-toggle" data-tooltip="Schimbă tema">
+          <i data-lucide="moon"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="zoom-out"
+          data-tooltip="Micșorează textul"
+        >
+          <i data-lucide="zoom-out"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="fullscreen-toggle"
+          data-tooltip="Comută ecran complet"
+        >
+          <i data-lucide="maximize"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="./lectia-1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ro" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ora de Religie</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Main Header -->
+      <header class="main-header">
+        <h1>Ora de Religie</h1>
+      </header>
+
+      <!-- Grade Level Selection -->
+      <section class="grade-selection">
+        <h2>Selectează Nivelul</h2>
+        <div class="categories-grid">
+          <!-- Will be populated from config.json -->
+        </div>
+      </section>
+
+      <!-- Lessons Grid -->
+      <section class="lessons-section hidden">
+        <h2>Lecții Disponibile</h2>
+        <div class="lessons-grid">
+          <!-- Will be populated dynamically -->
+        </div>
+      </section>
+
+      <!-- Classes Selection -->
+      <section class="classes-section hidden">
+        <h2>Selectează Clasa</h2>
+        <div class="classes-grid">
+          <!-- Will be populated based on grade -->
+        </div>
+      </section>
+
+      <section class="students-section hidden">
+        <h2>Elevi</h2>
+        <div class="students-grid">
+          <!-- Will be populated based on class -->
+        </div>
+      </section>
+
+      <!-- Load Lesson Button -->
+      <div class="load-lesson-container hidden">
+        <button id="loadLessonBtn" class="load-button group" disabled>
+          <span class="shadow"></span>
+          <span class="edge"></span>
+          <div class="front">
+            <span class="button-text">Selectează o lecție</span>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="arrow">
+              <path
+                clip-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

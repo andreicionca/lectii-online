@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ro" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecția 1</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"
+    />
+    <link rel="stylesheet" href="./lectia-1.css" />
+   
+    <link
+      rel="icon"
+      href="../../assets/favicon_lessons.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <audio id="backgroundMusic" loop>
+      <source
+        src="../../assets/music/Traditional gregorian chant - O filii et filiae.mp3"
+        type="audio/mp3"
+      />
+    </audio>
+    <div class="app-container">
+      <!-- Ecran de start -->
+      <div id="error-container" class="hidden"></div>
+      <div class="welcome-screen">
+        <button class="start-btn">Începe lecția</button>
+      </div>
+
+      <!-- Ecran cu titlu mare -->
+      <div class="title-screen hidden">
+        <div class="title-wrapper">
+          <h1 class="title"></h1>
+        </div>
+      </div>
+
+      <!-- Bara de navigație -->
+      <div class="nav-bar hidden">
+        <h1 class="nav-title"></h1>
+      </div>
+
+      <!-- Vizualizare teleprompter -->
+      <div class="teleprompter-view hidden">
+        <div class="content-container">
+          <!-- Adam și Eva -->
+          <h2 class="subtitle">Adam și Eva</h2>
+          <div class="paragraph">
+            Adam și Eva sunt primii oameni creați de Dumnezeu, conform tradiției
+            iudeo-creștine. Ei reprezintă începutul umanității și primul
+            legământ cu Dumnezeu. Povestea lor în Grădina Edenului și căderea în
+            păcat au influențat fundamental înțelegerea naturii umane și a
+            relației dintre om și divinitate.
+          </div>
+          <img
+            src="assets/lectia-1/Adam_si_Eva.jpg"
+            alt="Adam și Eva"
+            class="figure-image"
+          />
+
+          <!-- Noe -->
+          <h2 class="subtitle">Noe</h2>
+          <div class="paragraph">
+            Noe a fost ales de Dumnezeu pentru a salva omenirea și viețuitoarele
+            de potopul universal. Credința și ascultarea sa l-au făcut să
+            construiască arca conform instrucțiunilor divine, devenind astfel un
+            simbol al speranței și al unui nou început pentru omenire.
+          </div>
+          <img src="assets/lectia-1/Noe.jpg" alt="Noe" class="figure-image" />
+
+          <!-- Avraam -->
+          <h2 class="subtitle">Avraam</h2>
+          <div class="paragraph">
+            Avraam este considerat părintele celor trei religii monoteiste
+            majore: iudaismul, creștinismul și islamul. Credința sa
+            extraordinară și disponibilitatea de a-l sacrifica pe fiul său Isaac
+            la cererea lui Dumnezeu l-au făcut un model de devotament și
+            încredere în divinitate.
+          </div>
+          <img
+            src="assets/lectia-1/Avraam.jpg"
+            alt="Avraam"
+            class="figure-image"
+          />
+
+          <!-- Iacov -->
+          <h2 class="subtitle">Iacov</h2>
+          <div class="paragraph">
+            Iacov, fiul lui Isaac și nepotul lui Avraam, este cunoscut pentru
+            viziunea sa cu scara ce unea cerul cu pământul. După lupta sa cu
+            îngerul, a primit numele Israel, devenind părintele celor
+            douăsprezece triburi ale poporului evreu.
+          </div>
+          <img
+            src="assets/lectia-1/Iacov.jpg"
+            alt="Iacov"
+            class="figure-image"
+          />
+          <!-- Iosif -->
+          <h2 class="subtitle">Iosif</h2>
+          <div class="paragraph">
+            Iosif, fiul lui Iacov, a devenit conducător în Egipt după ce a fost
+            vândut ca sclav de frații săi. Prin înțelepciunea sa și darul de a
+            interpreta vise, a salvat Egiptul de foamete și și-a iertat frații,
+            demonstrând puterea iertării și a providenței divine.
+          </div>
+          <img
+            src="assets/lectia-1/Iosif.jpg"
+            alt="Iosif"
+            class="figure-image"
+          />
+          <!-- Moise -->
+          <h2 class="subtitle">Moise</h2>
+          <div class="paragraph">
+            Moise este figura centrală a iudaismului, cel care a condus poporul
+            evreu din robia egipteană spre Țara Promisă. A primit Cele Zece
+            Porunci pe Muntele Sinai și a stabilit legile fundamentale ale
+            poporului evreu.
+          </div>
+          <img
+            src="assets/lectia-1/Moise.jpg"
+            alt="Moise"
+            class="figure-image"
+          />
+          <h2 class="subtitle">Dreptul Iov</h2>
+          <div class="paragraph">
+            Iov este cunoscut pentru credința sa neclintită în Dumnezeu, în
+            ciuda suferințelor extreme prin care a trecut. Povestea sa din
+            Vechiul Testament este un exemplu de răbdare și loialitate față de
+            Dumnezeu, chiar și în cele mai dificile circumstanțe.
+          </div>
+          <img
+            src="assets/lectia-1/Iov.jpg"
+            alt="Dreptul Iov"
+            class="figure-image"
+          />
+          <!-- Samson -->
+          <h2 class="subtitle">Samson</h2>
+          <div class="paragraph">
+            Samson a fost ultimul dintre judecătorii mari ai Israelului,
+            cunoscut pentru puterea sa fizică extraordinară dată de Dumnezeu.
+            Povestea sa cu Dalila și sacrificiul final demonstrează atât
+            slăbiciunea umană, cât și puterea răscumpărării.
+          </div>
+          <img
+            src="assets/lectia-1/Samson.jpg"
+            alt="Samson"
+            class="figure-image"
+          />
+          <!-- David -->
+          <h2 class="subtitle">David</h2>
+          <div class="paragraph">
+            David, păstorul devenit rege, este cunoscut pentru victoria sa
+            asupra lui Goliat și pentru că a fost un conducător după inima lui
+            Dumnezeu. Psalmii săi reprezintă unele dintre cele mai frumoase
+            poezii religioase din istorie.
+          </div>
+          <img
+            src="assets/lectia-1/David.jpg"
+            alt="David"
+            class="figure-image"
+          />
+          <!-- Solomon -->
+          <h2 class="subtitle">Solomon</h2>
+          <div class="paragraph">
+            Solomon, fiul lui David, este renumit pentru înțelepciunea sa
+            extraordinară primită de la Dumnezeu. A construit primul Templu din
+            Ierusalim și a condus Israelul în perioada sa de maximă glorie.
+          </div>
+          <img
+            src="assets/lectia-1/Solomon.jpg"
+            alt="Solomon"
+            class="figure-image"
+          />
+          <!-- Ilie -->
+          <h2 class="subtitle">Ilie</h2>
+          <div class="paragraph">
+            Profetul Ilie este una dintre cele mai importante figuri profetice
+            din Vechiul Testament. Este cunoscut pentru confruntarea sa cu
+            profeții lui Baal și pentru că a fost ridicat la cer într-un car de
+            foc.
+          </div>
+          <img src="assets/lectia-1/Ilie.jpg" alt="Ilie" class="figure-image" />
+          <!-- Daniel -->
+          <h2 class="subtitle">Daniel</h2>
+          <div class="paragraph">
+            Daniel a fost un profet evreu în timpul exilului babilonian.
+            Înțelepciunea sa și credința puternică l-au făcut să supraviețuiască
+            în groapa cu lei și să devină consilier al regilor străini.
+          </div>
+          <img
+            src="assets/lectia-1/Daniel.jpg"
+            alt="Daniel"
+            class="figure-image"
+          />
+          <!-- Confucius -->
+          <h2 class="subtitle">Confucius</h2>
+          <div class="paragraph">
+            Confucius (551-479 î.Hr.) a fost un filozof și învățător chinez ale
+            cărui învățături au influențat profund gândirea și cultura asiatică.
+            Filozofia sa se concentrează pe moralitate personală, relații
+            sociale corecte și justiție.
+          </div>
+          <img
+            src="assets/lectia-1/Confucius.jpg"
+            alt="Confucius"
+            class="figure-image"
+          />
+          <!-- Buddha -->
+          <h2 class="subtitle">Buddha</h2>
+          <div class="paragraph">
+            Buddha (Siddhartha Gautama, c. 563-483 î.Hr.) este fondatorul
+            budismului. După ce a atins iluminarea sub copacul Bodhi, a predicat
+            Calea de Mijloc și Cele Patru Adevăruri Nobile pentru eliberarea de
+            suferință.
+          </div>
+          <img
+            src="assets/lectia-1/Buddha.jpg"
+            alt="Buddha"
+            class="figure-image"
+          />
+          <!-- Ioan Botezătorul -->
+          <h2 class="subtitle">Ioan Botezătorul</h2>
+          <div class="paragraph">
+            Ioan Botezătorul a pregătit calea pentru venirea lui Iisus Hristos.
+            A predicat pocăința și a botezat oamenii în râul Iordan, inclusiv pe
+            Iisus, fiind ultimul mare profet înainte de era creștină.
+          </div>
+          <img
+            src="assets/lectia-1/Ioan_Botezatorul.jpg"
+            alt="Ioan Botezătorul"
+            class="figure-image"
+          />
+          <!-- Maria -->
+          <h2 class="subtitle">Maria</h2>
+          <div class="paragraph">
+            Maria, mama lui Iisus, este venerată în creștinism ca Născătoare de
+            Dumnezeu. Acceptarea sa umilă a voii divine și rolul său în viața
+            lui Iisus o fac un model de credință și devotament.
+          </div>
+          <img
+            src="assets/lectia-1/Maria.jpg"
+            alt="Maria"
+            class="figure-image"
+          />
+          <!-- Apostolul Petru -->
+          <h2 class="subtitle">Apostolul Petru</h2>
+          <div class="paragraph">
+            Simon Petru a fost unul dintre primii și cei mai importanți apostoli
+            ai lui Iisus. Este considerat de către Biserica Catolică primul
+            episcop (papă) al Romei.
+          </div>
+          <img
+            src="assets/lectia-1/Apostolul_Petru.jpg"
+            alt="Apostolul Petru"
+            class="figure-image"
+          />
+          <!-- Apostolul Andrei -->
+          <h2 class="subtitle">Apostolul Andrei</h2>
+          <div class="paragraph">
+            Apostolul Andrei, fratele lui Petru, este cunoscut ca fiind cel care
+            a adus mesajul creștinismului în regiuni precum Scythia (teritoriul
+            actual al României). Este considerat ocrotitorul României și simbol
+            al misiunii apostolice în răspândirea Evangheliei.
+          </div>
+          <img
+            src="assets/lectia-1/Apostolul_Andrei.jpg"
+            alt="Apostolul Andrei"
+            class="figure-image"
+          />
+
+          <!-- Apostolul Pavel -->
+          <h2 class="subtitle">Apostolul Pavel</h2>
+          <div class="paragraph">
+            Pavel, inițial persecutor al creștinilor, a devenit după convertirea
+            sa pe drumul Damascului cel mai influent apostol al neamurilor.
+            Scrisorile sale formează o parte substanțială din Noul Testament.
+          </div>
+          <img
+            src="assets/lectia-1/Apostolul_Pavel.jpg"
+            alt="Apostolul Pavel"
+            class="figure-image"
+          />
+          <!-- Apostolul Ioan -->
+          <h2 class="subtitle">Apostolul Ioan</h2>
+          <div class="paragraph">
+            Ioan, "ucenicul pe care-l iubea Iisus", este autorul Evangheliei
+            după Ioan, a trei epistole și a cărții Apocalipsa. Teologia sa
+            profundă a influențat fundamental înțelegerea creștină despre
+            Dumnezeu și dragoste.
+          </div>
+          <img
+            src="assets/lectia-1/Apostolul_Ioan.jpg"
+            alt="Apostolul Ioan"
+            class="figure-image"
+          />
+
+          <!-- Sfântul Gheorghe -->
+          <h2 class="subtitle">Sfântul Gheorghe</h2>
+          <div class="paragraph">
+            Sfântul Gheorghe este unul dintre cei mai venerați sfinți militari,
+            cunoscut pentru curajul și sacrificiul său în apărarea credinței
+            creștine. Povestea sa cu lupta împotriva balaurului simbolizează
+            biruința binelui asupra răului și a credinței asupra necredinței.
+          </div>
+          <img
+            src="assets/lectia-1/Sfantul_Gheorghe.jpg"
+            alt="Sfântul Gheorghe"
+            class="figure-image"
+          />
+          <!-- Sfântul Nicolae -->
+          <h2 class="subtitle">Sfântul Nicolae</h2>
+          <div class="paragraph">
+            Sfântul Nicolae (270-343 d.Hr.) a fost episcop în Myra și este
+            cunoscut pentru generozitatea sa față de săraci. Faptele sale de
+            caritate au inspirat tradiția lui Moș Crăciun în multe culturi.
+          </div>
+          <img
+            src="assets/lectia-1/Sfantul_Nicolae.jpg"
+            alt="Sfântul Nicolae"
+            class="figure-image"
+          />
+          <!-- Augustin de Hipona -->
+          <h2 class="subtitle">Augustin de Hipona</h2>
+          <div class="paragraph">
+            Augustin de Hipona (354-430) este unul dintre cei mai influenți
+            teologi și filozofi creștini. Lucrările sale, inclusiv "Confesiuni"
+            și "Cetatea lui Dumnezeu", au modelat fundamental gândirea creștină
+            occidentală.
+          </div>
+          <img
+            src="assets/lectia-1/Augustin_de_Hipona.jpg"
+            alt="Augustin de Hipona"
+            class="figure-image"
+          />
+          <!-- Ioan Gură de Aur -->
+          <h2 class="subtitle">Ioan Gură de Aur</h2>
+          <div class="paragraph">
+            Ioan Gură de Aur (347-407) a fost arhiepiscop al Constantinopolului,
+            renumit pentru elocvența sa extraordinară și interpretările biblice.
+            Predicile și scrierile sale continuă să influențeze creștinismul
+            ortodox.
+          </div>
+          <img
+            src="assets/lectia-1/Ioan_Gura_de_Aur.jpg"
+            alt="Ioan Gură de Aur"
+            class="figure-image"
+          />
+          <!-- Profetul Mahomed -->
+          <h2 class="subtitle">Profetul Mahomed</h2>
+          <div class="paragraph">
+            Profetul Mahomed (570-632) este fondatorul islamului și ultimul
+            profet în tradiția musulmană. A primit revelația Coranului și a
+            stabilit fundamentele religiei islamice și ale primei comunități
+            musulmane.
+          </div>
+          <img
+            src="assets/lectia-1/Profetul_Mahomed.jpg"
+            alt="Profetul Mahomed"
+            class="figure-image"
+          />
+          <!-- Francisc de Assisi -->
+          <h2 class="subtitle">Francisc de Assisi</h2>
+          <div class="paragraph">
+            Francisc de Assisi (1181-1226) a renunțat la o viață de lux pentru a
+            trăi în sărăcie și a predica dragostea lui Dumnezeu. Este cunoscut
+            pentru dragostea sa față de natură și animale, precum și pentru
+            reformarea vieții monastice.
+          </div>
+          <img
+            src="assets/lectia-1/Francisc_de_Assisi.jpg"
+            alt="Francisc de Assisi"
+            class="figure-image"
+          />
+          <!-- Martin Luther -->
+          <h2 class="subtitle">Martin Luther</h2>
+          <div class="paragraph">
+            Martin Luther (1483-1546) a inițiat Reforma Protestantă prin cele 95
+            de teze ale sale. A tradus Biblia în germană și a promovat ideea
+            mântuirii prin credință, transformând fundamental creștinismul
+            occidental.
+          </div>
+          <img
+            src="assets/lectia-1/Martin_Luther.jpg"
+            alt="Martin Luther"
+            class="figure-image"
+          />
+          <!-- Maica Tereza -->
+          <h2 class="subtitle">Maica Tereza</h2>
+          <div class="paragraph">
+            Maica Tereza (1910-1997) și-a dedicat viața ajutorării celor mai
+            săraci dintre săraci în Calcutta, India. Munca sa caritabilă și
+            devotamentul față de cei suferinzi i-au adus Premiul Nobel pentru
+            Pace.
+          </div>
+          <img
+            src="assets/lectia-1/Maica_Tereza.jpg"
+            alt="Maica Tereza"
+            class="figure-image"
+          />
+          <!-- Papa Ioan Paul al II-lea -->
+          <h2 class="subtitle">Papa Ioan Paul al II-lea</h2>
+          <div class="paragraph">
+            Papa Ioan Paul al II-lea (1920-2005) a fost unul dintre cei mai
+            influenți papi din istorie. A jucat un rol crucial în căderea
+            comunismului în Europa de Est și a promovat dialogul interreligios
+            și ecumenic.
+          </div>
+          <img
+            src="assets/lectia-1/Papa_Ioan_Paul_II.jpg"
+            alt="Papa Ioan Paul al II-lea"
+            class="figure-image"
+          />
+          <!-- Dalai Lama -->
+          <h2 class="subtitle">Dalai Lama</h2>
+          <div class="paragraph">
+            Actualul Dalai Lama (n. 1935) este liderul spiritual al budismului
+            tibetan. Este cunoscut pentru promovarea păcii mondiale, a
+            non-violenței și a dialogului interreligios, precum și pentru
+            eforturile sale de prezervare a culturii tibetane.
+          </div>
+          <img
+            src="assets/lectia-1/Dalai_Lama.jpg"
+            alt="Dalai Lama"
+            class="figure-image"
+          />
+        </div>
+      </div>
+      <!-- Selector student -->
+      <div class="student-selector hidden">
+        <div
+          class="student-card"
+          data-tooltip="Apasă tasta 'e' sau ➔ pentru a alege următorul elev"
+        >
+          <div class="student-name"></div>
+        </div>
+      </div>
+
+      <!-- Controale laterale -->
+      <div class="side-controls left hidden">
+        <button
+          class="control-btn"
+          id="speed-down"
+          data-tooltip="Micșorează viteza de redare"
+        >
+          <i data-lucide="rewind"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="play-pause"
+          data-tooltip="Pornește/Pauză"
+        >
+          <i data-lucide="play"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="speed-up"
+          data-tooltip="Mărește viteza de redare"
+        >
+          <i data-lucide="fast-forward"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="sound-toggle"
+          data-tooltip="Oprește sunetul (M)"
+        >
+          <i data-lucide="volume-2"></i>
+        </button>
+      </div>
+
+      <div class="side-controls right">
+        <button class="control-btn" id="zoom-in" data-tooltip="Mărește textul">
+          <i data-lucide="zoom-in"></i>
+        </button>
+        <button class="theme-toggle" data-tooltip="Schimbă tema">
+          <i data-lucide="moon"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="zoom-out"
+          data-tooltip="Micșorează textul"
+        >
+          <i data-lucide="zoom-out"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="fullscreen-toggle"
+          data-tooltip="Comută ecran complet"
+        >
+          <i data-lucide="maximize"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="./lectia-1.js"></script>
+  </body>
+</html>
