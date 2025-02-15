@@ -26,7 +26,7 @@ const fullscreenToggle = document.getElementById("fullscreen-toggle");
 // Configurrări inițiale principale pentru lecție
 
 backgroundMusic.volume = 0.5; // Setăm volumul inițial la 50%
-const titleText = "Personalități religioase"; // Textul titlului
+const titleText = "Personalități religioase ale lumii"; // Textul titlului
 const TITLE_ANIMATION_DURATION = 4000; // durata animației typing in milisecunde
 const POST_ANIMATION_DELAY = 4000; // delay după animație în milisecunde
 

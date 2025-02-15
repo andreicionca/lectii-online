@@ -88,7 +88,7 @@ body {
 }
 
 .title-wrapper {
-  max-width: 90vw;
+  max-width: 80vw;
   margin: 0 auto;
   overflow: hidden;
   display: flex;
@@ -530,6 +530,11 @@ body {
     width: 28px;
     height: 28px;
     opacity: 0.6;
+    outline: none !important;
+    /* Eliminăm efectul de "stuck" după apăsare */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
   }
 
   .side-controls .control-btn i,
@@ -541,6 +546,13 @@ body {
   /* Ascundem selectorul de studenți */
   .student-selector {
     display: none;
+  }
+
+  @supports (-webkit-overflow-scrolling: touch) {
+    .teleprompter-view {
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+    }
   }
 }
 
@@ -574,8 +586,8 @@ body {
   .side-controls .control-btn,
   .theme-toggle {
     padding: 5px;
-    width: 22px;
-    height: 22px;
+    width: 28px;
+    height: 28px;
     opacity: 0.5;
   }
 
@@ -600,6 +612,7 @@ body {
 
   .nav-title {
     font-size: 14px;
+    text-align: center;
   }
 
   /* Ajustări pentru imagini */
