@@ -470,7 +470,7 @@ body {
   }
 
   .content-container {
-    padding: 80px 40px;
+    padding: 80px 80px;
   }
 
   .teleprompter-view {
@@ -544,14 +544,14 @@ body {
 /* Telefoane și ecrane mici */
 @media screen and (max-width: 480px) {
   :root {
-    --base-font-size: 16px;
+    --base-font-size: 17px;
   }
 
   .content-container {
     padding: 60px 35px;
   }
   .title {
-    font-size: 33px;
+    font-size: 30px;
   }
 
   /* Tipografie - ajustări suplimentare pentru ecrane mici */
