@@ -287,6 +287,8 @@ body {
   justify-content: center;
   cursor: pointer;
   transition: transform 0.2s, background-color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  outline: none !important;
 }
 
 /* Hover și Active */
@@ -604,3 +606,12 @@ body {
     margin: 3px 0;
   }
 }
+
+/* Dezactivăm tooltipurile pe mobile */
+@media (hover: none) {
+  [data-tooltip]::after {
+    display: none !important;
+  }
+}
+
+/* Eliminăm highlight-ul la tap și outline */
