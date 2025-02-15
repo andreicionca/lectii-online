@@ -567,7 +567,7 @@ teleprompterView.addEventListener("wheel", (e) => {
 // Variabile pentru gestionarea touch events
 let touchStartY = 0;
 let lastTouchY = 0;
-let touchScrollSpeed = 0.5; // Factor pentru viteza de scroll pe mobile
+let touchScrollSpeed = 1.5; // Factor pentru viteza de scroll pe mobile
 
 // Adăugăm event listeners pentru touch events
 teleprompterView.addEventListener("touchstart", (e) => {
