@@ -26,7 +26,7 @@ const fullscreenToggle = document.getElementById("fullscreen-toggle");
 // Configurrări inițiale principale pentru lecție
 
 backgroundMusic.volume = 0.5; // Setăm volumul inițial la 50%
-const titleText = "Personalități religioase biblice"; // Textul titlului
+const titleText = "Personalități religioase alese"; // Textul titlului
 const TITLE_ANIMATION_DURATION = 3500; // durata animației typing in milisecunde
 const POST_ANIMATION_DELAY = 3500; // delay după animație în milisecunde
 
@@ -564,63 +564,51 @@ teleprompterView.addEventListener("wheel", (e) => {
   }
 });
 
-// Adăugăm variabile pentru gestionarea touch-ului
-let lastTouchY = 0;
+// Variabile pentru gestionarea touch events
 let touchStartY = 0;
+let lastTouchY = 0;
+let touchScrollSpeed = 0.5; // Factor pentru viteza de scroll pe mobile
 
 // Adăugăm event listeners pentru touch events
-teleprompterView.addEventListener(
-  "touchstart",
-  (e) => {
-    touchStartY = e.touches[0].clientY;
-    lastTouchY = touchStartY;
-  },
-  { passive: false }
-);
+teleprompterView.addEventListener("touchstart", (e) => {
+  touchStartY = e.touches[0].clientY;
+  lastTouchY = touchStartY;
+});
 
-teleprompterView.addEventListener(
-  "touchmove",
-  (e) => {
-    e.preventDefault(); // Prevenim scroll-ul implicit
+teleprompterView.addEventListener("touchmove", (e) => {
+  e.preventDefault(); // Prevenim scroll-ul implicit
+  const currentTouchY = e.touches[0].clientY;
+  const touchDelta = lastTouchY - currentTouchY;
+  lastTouchY = currentTouchY;
 
-    const currentTouchY = e.touches[0].clientY;
-    const deltaY = lastTouchY - currentTouchY;
-    lastTouchY = currentTouchY;
+  if (!isPlaying) {
+    // Când teleprompterul este oprit
+    const currentTransform = getComputedStyle(contentContainer).transform;
+    const matrix = new DOMMatrixReadOnly(currentTransform);
+    const currentY = matrix.m42;
 
-    if (!isPlaying) {
-      // Logica pentru când teleprompterul este oprit
-      const currentTransform = getComputedStyle(contentContainer).transform;
-      const matrix = new DOMMatrixReadOnly(currentTransform);
-      const currentY = matrix.m42;
+    // Calculăm noua poziție
+    const newY = currentY - touchDelta * touchScrollSpeed;
 
-      // Calculăm noua poziție
-      const newY = currentY - deltaY * 1.5; // Ajustăm sensibilitatea pentru touch
-
-      // Verificăm limitele
-      if (newY <= -totalHeight) {
-        contentContainer.style.transform = `translate3d(0, ${-totalHeight}px, 0)`;
-      } else if (newY >= viewportHeight) {
-        contentContainer.style.transform = `translate3d(0, ${viewportHeight}px, 0)`;
-      } else {
-        contentContainer.style.transform = `translate3d(0, ${newY}px, 0)`;
-      }
+    // Verificăm limitele
+    if (newY <= -totalHeight) {
+      contentContainer.style.transform = `translate3d(0, ${-totalHeight}px, 0)`;
+    } else if (newY >= viewportHeight) {
+      contentContainer.style.transform = `translate3d(0, ${viewportHeight}px, 0)`;
     } else {
-      // Logica pentru când teleprompterul rulează
-      isManualScrolling = true;
-      deltaY = deltaY * 1.5; // Ajustăm sensibilitatea pentru touch
+      contentContainer.style.transform = `translate3d(0, ${newY}px, 0)`;
     }
-  },
-  { passive: false }
-);
+  } else {
+    // Când teleprompterul rulează
+    isManualScrolling = true;
+    deltaY = touchDelta * touchScrollSpeed;
+  }
+});
 
-teleprompterView.addEventListener(
-  "touchend",
-  () => {
-    lastTouchY = 0;
-    touchStartY = 0;
-  },
-  { passive: false }
-);
+teleprompterView.addEventListener("touchend", () => {
+  touchStartY = 0;
+  lastTouchY = 0;
+});
 
 // Keyboard controls
 document.addEventListener("keydown", (event) => {
