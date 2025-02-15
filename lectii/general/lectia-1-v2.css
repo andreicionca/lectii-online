@@ -461,6 +461,11 @@ body {
   display: none !important;
 }
 
+.teleprompter-view {
+  touch-action: pan-y pinch-zoom;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* Adăugăm media queries pentru mobile */
 /* Adăugăm media queries pentru mobile */
 /* Adăugăm media queries pentru mobile */
