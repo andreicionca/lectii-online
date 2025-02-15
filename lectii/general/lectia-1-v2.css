@@ -87,7 +87,7 @@ body {
 }
 
 .title-wrapper {
-  max-width: 90vw;
+  max-width: 80vw;
   margin: 0 auto;
   overflow: hidden;
   display: flex;
@@ -167,7 +167,7 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: 50px auto 0;
-  overflow-y: auto; /* Adăugăm overflow-y: auto pentru scrollbar */
+  overflow-y: hidden; /* Adăugăm overflow-y: auto pentru scrollbar */
   position: relative;
 }
 /* Stilizare scrollbar pentru Webkit (Chrome, Safari, etc.) */

@@ -26,9 +26,9 @@ const fullscreenToggle = document.getElementById("fullscreen-toggle");
 // Configurrări inițiale principale pentru lecție
 
 backgroundMusic.volume = 0.5; // Setăm volumul inițial la 50%
-const titleText = "Personalități religioase ale"; // Textul titlului
-const TITLE_ANIMATION_DURATION = 4000; // durata animației typing in milisecunde
-const POST_ANIMATION_DELAY = 4000; // delay după animație în milisecunde
+const titleText = "Personalități religioase"; // Textul titlului
+const TITLE_ANIMATION_DURATION = 3500; // durata animației typing in milisecunde
+const POST_ANIMATION_DELAY = 3500; // delay după animație în milisecunde
 
 // Configurare pentru viteze
 const speedLevels = {
@@ -86,7 +86,7 @@ currentStudents.forEach((student) => {
 normalizeTracking();
 
 // Configurare inițială
-let isMuted = false;
+let isMuted = true;
 let isMusicPlaying = false;
 let isPlaying = false;
 let scrollSpeed = speedLevels["4"]; // Pornim cu o viteză confortabilă (tasta 4)
@@ -106,6 +106,7 @@ const maxZoom = 2;
 // Funcție pentru toggle temă
 function toggleTheme() {
   document.documentElement.classList.toggle("dark");
+
   const themeIcon = themeToggle.querySelector("[data-lucide]");
 
   if (document.documentElement.classList.contains("dark")) {
@@ -149,7 +150,7 @@ function startLesson() {
   tempDiv.style.whiteSpace = "nowrap";
   document.body.appendChild(tempDiv);
 
-  const maxWidth = window.innerWidth * 0.9;
+  const maxWidth = window.innerWidth * 0.8;
 
   words.forEach((word) => {
     tempDiv.textContent = [...currentLine, word].join(" ");
