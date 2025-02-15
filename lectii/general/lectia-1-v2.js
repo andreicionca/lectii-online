@@ -26,7 +26,7 @@ const fullscreenToggle = document.getElementById("fullscreen-toggle");
 // Configurrări inițiale principale pentru lecție
 
 backgroundMusic.volume = 0.5; // Setăm volumul inițial la 50%
-const titleText = "Personalități religioase ale lumii"; // Textul titlului
+const titleText = "Personalități religioase"; // Textul titlului
 const TITLE_ANIMATION_DURATION = 4000; // durata animației typing in milisecunde
 const POST_ANIMATION_DELAY = 4000; // delay după animație în milisecunde
 
@@ -102,6 +102,9 @@ let deltaY = 0;
 let zoomLevel = 1;
 const minZoom = 0.5;
 const maxZoom = 2;
+let touchStartY = 0;
+let lastTouchY = 0;
+let isTouching = false;
 
 // Funcție pentru toggle temă
 function toggleTheme() {
@@ -646,6 +649,64 @@ window.addEventListener("beforeunload", () => {
   cancelAnimationFrame(animationFrameId);
   backgroundMusic.pause();
 });
+
+teleprompterView.addEventListener(
+  "touchstart",
+  (e) => {
+    e.preventDefault();
+    touchStartY = e.touches[0].clientY;
+    lastTouchY = touchStartY;
+    isTouching = true;
+  },
+  { passive: false }
+);
+
+teleprompterView.addEventListener(
+  "touchmove",
+  (e) => {
+    e.preventDefault();
+    if (!isTouching) return;
+
+    const currentY = e.touches[0].clientY;
+    const deltaY = lastTouchY - currentY;
+    lastTouchY = currentY;
+
+    if (!isPlaying) {
+      const currentTransform = getComputedStyle(contentContainer).transform;
+      const matrix = new DOMMatrixReadOnly(currentTransform);
+      const currentTranslateY = matrix.m42;
+
+      // Calculate new position
+      const newY = currentTranslateY - deltaY;
+
+      // Apply bounds checking
+      if (newY <= -totalHeight) {
+        contentContainer.style.transform = `translate3d(0, ${-totalHeight}px, 0)`;
+      } else if (newY >= viewportHeight) {
+        contentContainer.style.transform = `translate3d(0, ${viewportHeight}px, 0)`;
+      } else {
+        contentContainer.style.transform = `translate3d(0, ${newY}px, 0)`;
+      }
+    } else {
+      // If animation is running, accumulate delta for next frame
+      isManualScrolling = true;
+      deltaY = deltaY * 0.5; // Match the desktop scroll sensitivity
+    }
+  },
+  { passive: false }
+);
+
+teleprompterView.addEventListener(
+  "touchend",
+  () => {
+    isTouching = false;
+  },
+  { passive: false }
+);
+
+// Update the CSS to improve touch handling
+teleprompterView.style.touchAction = "none";
+teleprompterView.style.overscrollBehavior = "none";
 
 // Setăm zoom-ul inițial mai mare
 document.documentElement.style.setProperty("--zoom-level", 1.25); // 25% mai mare by default
