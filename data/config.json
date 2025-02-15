@@ -40,13 +40,13 @@
         "id": "lectia-1",
         "name": "Lecția 1",
         "title": "Introducere în Religie",
-        "path": "./lectii/9/lectia-1.html"
+        "path": "/lectii/9/lectia-1.html"
       },
       {
         "id": "lectia-2",
         "name": "Lecția 2",
         "title": "Creștinismul",
-        "path": "./lectii/9/lectia-2.html"
+        "path": "/lectii/9/lectia-2.html"
       }
     ],
     "10": [
@@ -54,13 +54,13 @@
         "id": "lectia-1",
         "name": "Lecția 1",
         "title": "Introducere în Religie",
-        "path": "./lectii/10/lectia-1.html"
+        "path": "/lectii/10/lectia-1.html"
       },
       {
         "id": "lectia-2",
         "name": "Lecția 2",
         "title": "Iudaismul",
-        "path": "./lectii/10/lectia-2.html"
+        "path": "/lectii/10/lectia-2.html"
       }
     ],
     "11": [
@@ -68,13 +68,13 @@
         "id": "lectia-1",
         "name": "Lecția 1",
         "title": "Introducere în Religie",
-        "path": "./lectii/11/lectia-1.html"
+        "path": "/lectii/11/lectia-1.html"
       },
       {
         "id": "lectia-2",
         "name": "Lecția 2",
         "title": "Islamul",
-        "path": "./lectii/11/lectia-2.html"
+        "path": "/lectii/11/lectia-2.html"
       }
     ],
     "12": [
@@ -82,13 +82,13 @@
         "id": "lectia-1",
         "name": "Lecția 1",
         "title": "Introducere în Religie",
-        "path": "./lectii/12/lectia-1.html"
+        "path": "/lectii/12/lectia-1.html"
       },
       {
         "id": "lectia-2",
         "name": "Lecția 2",
         "title": "Budismul",
-        "path": "./lectii/12/lectia-2.html"
+        "path": "/lectii/12/lectia-2.html"
       }
     ],
     "General": [
@@ -96,13 +96,13 @@
         "id": "lectia-1",
         "name": "Lecția 1",
         "title": "Personalități religioase",
-        "path": "./lectii/general/lectia-1.html"
+        "path": "/lectii/general/lectia-1.html"
       },
       {
         "id": "lectia-1-v2",
         "name": "Lecția 1 v2",
         "title": "Personalități religioase v2",
-        "path": "./lectii/general/lectia-1-v2.html"
+        "path": "/lectii/general/lectia-1-v2.html"
       }
     ]
   },

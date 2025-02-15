@@ -6,7 +6,7 @@ let selectedClass = null;
 let selectedLesson = null;
 let selectedStudents = [];
 async function loadConfig() {
-  const response = await fetch("./data/config.json");
+  const response = await fetch("/data/config.json");
   config = await response.json();
   renderGrades();
   setupTitleToggle();
