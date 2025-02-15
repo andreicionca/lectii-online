@@ -26,7 +26,7 @@ const fullscreenToggle = document.getElementById("fullscreen-toggle");
 // Configurrări inițiale principale pentru lecție
 
 backgroundMusic.volume = 0.5; // Setăm volumul inițial la 50%
-const titleText = "Personalități religioase"; // Textul titlului
+const titleText = "Personalități religioase istorice"; // Textul titlului
 const TITLE_ANIMATION_DURATION = 3500; // durata animației typing in milisecunde
 const POST_ANIMATION_DELAY = 3500; // delay după animație în milisecunde
 
@@ -102,7 +102,8 @@ let deltaY = 0;
 let zoomLevel = 1;
 const minZoom = 0.5;
 const maxZoom = 2;
-
+let touchStartY = 0;
+let lastTouchY = 0;
 // Funcție pentru toggle temă
 function toggleTheme() {
   document.documentElement.classList.toggle("dark");
@@ -563,6 +564,71 @@ teleprompterView.addEventListener("wheel", (e) => {
     deltaY = e.deltaY * 0.5;
   }
 });
+
+// Variabile pentru touch events
+
+// Funcție comună pentru procesarea scrollului
+function processScroll(deltaY) {
+  if (!isPlaying) {
+    const currentTransform = getComputedStyle(contentContainer).transform;
+    const matrix = new DOMMatrixReadOnly(currentTransform);
+    const currentY = matrix.m42;
+
+    // Calculăm noua poziție
+    const newY = currentY - deltaY * 0.5; // Reducem viteza scroll-ului cu 0.5
+
+    // Verificăm limitele
+    if (newY <= -totalHeight) {
+      contentContainer.style.transform = `translate3d(0, ${-totalHeight}px, 0)`;
+    } else if (newY >= viewportHeight) {
+      contentContainer.style.transform = `translate3d(0, ${viewportHeight}px, 0)`;
+    } else {
+      contentContainer.style.transform = `translate3d(0, ${newY}px, 0)`;
+    }
+  } else {
+    // Dacă animația rulează, acumulăm delta pentru următorul frame
+    isManualScrolling = true;
+    deltaY = deltaY * 0.5;
+  }
+}
+
+// Mouse wheel event
+teleprompterView.addEventListener("wheel", (e) => {
+  e.preventDefault();
+  processScroll(e.deltaY);
+});
+
+// Touch events
+teleprompterView.addEventListener(
+  "touchstart",
+  (e) => {
+    e.preventDefault();
+    touchStartY = e.touches[0].clientY;
+    lastTouchY = touchStartY;
+  },
+  { passive: false }
+);
+
+teleprompterView.addEventListener(
+  "touchmove",
+  (e) => {
+    e.preventDefault();
+    const currentTouchY = e.touches[0].clientY;
+    const deltaY = lastTouchY - currentTouchY;
+    lastTouchY = currentTouchY;
+
+    processScroll(deltaY);
+  },
+  { passive: false }
+);
+
+teleprompterView.addEventListener(
+  "touchend",
+  (e) => {
+    e.preventDefault();
+  },
+  { passive: false }
+);
 
 // Keyboard controls
 document.addEventListener("keydown", (event) => {
