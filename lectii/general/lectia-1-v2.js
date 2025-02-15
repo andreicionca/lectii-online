@@ -131,12 +131,59 @@ function toggleFullscreen() {
     fullscreenToggle.setAttribute("data-tooltip", "Comută ecran complet");
   }
 }
-
 function startLesson() {
   welcomeScreen.classList.add("hidden");
   titleScreen.classList.remove("hidden");
-  lessonTitle.textContent = titleText;
-  lessonTitle.classList.add("typewriter");
+  lessonTitle.innerHTML = "";
+
+  const words = titleText.split(" ");
+  let lines = [];
+  let currentLine = [];
+
+  let tempDiv = document.createElement("div");
+  tempDiv.style.visibility = "hidden";
+  tempDiv.style.position = "absolute";
+  tempDiv.style.fontSize = getComputedStyle(lessonTitle).fontSize;
+  tempDiv.style.fontFamily = getComputedStyle(lessonTitle).fontFamily;
+  tempDiv.style.fontWeight = getComputedStyle(lessonTitle).fontWeight;
+  tempDiv.style.whiteSpace = "nowrap";
+  document.body.appendChild(tempDiv);
+
+  const maxWidth = window.innerWidth * 0.9;
+
+  words.forEach((word) => {
+    tempDiv.textContent = [...currentLine, word].join(" ");
+    const currentWidth = tempDiv.getBoundingClientRect().width;
+
+    if (currentWidth <= maxWidth) {
+      currentLine.push(word);
+    } else {
+      if (currentLine.length > 0) {
+        lines.push(currentLine.join(" "));
+        currentLine = [word];
+      } else {
+        lines.push(word);
+      }
+    }
+  });
+
+  if (currentLine.length > 0) {
+    lines.push(currentLine.join(" "));
+  }
+
+  lines.forEach((line, index) => {
+    const lineDiv = document.createElement("div");
+    lineDiv.className = "title-line";
+    lineDiv.textContent = line;
+
+    tempDiv.textContent = line;
+    const exactWidth = tempDiv.getBoundingClientRect().width;
+    lineDiv.style.setProperty("--line-content-width", `${exactWidth}px`);
+
+    lessonTitle.appendChild(lineDiv);
+  });
+
+  document.body.removeChild(tempDiv);
 
   document.documentElement.requestFullscreen().catch((err) => {
     showError(
@@ -144,10 +191,38 @@ function startLesson() {
     );
   });
 
-  titleTimeout = setTimeout(() => {
-    startTeleprompter();
-  }, TITLE_ANIMATION_DURATION + POST_ANIMATION_DELAY);
+  const lineElements = document.querySelectorAll(".title-line");
+  const TYPING_DURATION = 3500;
+
+  const animateLine = (index) => {
+    if (index >= lineElements.length) {
+      setTimeout(() => {
+        startTeleprompter();
+      }, POST_ANIMATION_DELAY);
+      return;
+    }
+
+    const line = lineElements[index];
+
+    if (index > 0) {
+      setTimeout(() => {
+        lineElements[index - 1].classList.remove("active");
+        line.classList.add("active", "typewriter");
+      }, 100);
+    } else {
+      line.classList.add("active", "typewriter");
+    }
+
+    setTimeout(() => {
+      animateLine(index + 1);
+    }, TYPING_DURATION);
+  };
+
+  setTimeout(() => {
+    animateLine(0);
+  }, 100);
 }
+
 // Funcție pentru fade in/out
 function fadeAudio(shouldPlay) {
   const fadePoints = 20; // Numărul de pași pentru fade
