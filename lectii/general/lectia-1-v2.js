@@ -1,4 +1,4 @@
-// pagina /lectii/general/lectia-1.js
+// pagina /lectii/general/lectia-1-v2.js
 
 // Selectăm elementele DOM
 const welcomeScreen = document.querySelector(".welcome-screen");
