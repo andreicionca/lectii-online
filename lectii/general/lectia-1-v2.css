@@ -527,7 +527,7 @@ body {
 
   .image-caption {
     padding: 10px 15px;
-    font-size: calc(15px * var(--zoom-level));
+    font-size: calc(14px * var(--zoom-level));
     line-height: 1.35;
   }
 
@@ -599,8 +599,8 @@ body {
     text-align: left;
   }
   .image-caption {
-    padding: 8px 12px;
-    font-size: calc(14px * var(--zoom-level));
+    padding: 6px 8px;
+    font-size: calc(10px * var(--zoom-level));
     line-height: 1.3;
   }
   /* Controale - mai mici pentru telefoane */
