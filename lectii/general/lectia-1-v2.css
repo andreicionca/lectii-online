@@ -217,7 +217,7 @@ body {
   font-size: calc(48px * var(--zoom-level));
   font-weight: 600;
   color: var(--secondary-text);
-  margin: 40px 0 20px;
+  margin-top: 40px;
 }
 
 .paragraph {
@@ -512,7 +512,7 @@ body {
   /* Tipografie */
   .subtitle {
     font-size: calc(28px * var(--zoom-level));
-    margin: 20px 0 15px;
+    margin-top: 20px;
   }
 
   .paragraph {
@@ -589,7 +589,7 @@ body {
   /* Tipografie - ajustări suplimentare pentru ecrane mici */
   .subtitle {
     font-size: calc(22px * var(--zoom-level));
-    margin: 15px 0 12px;
+    margin-top: 15px;
   }
 
   .paragraph {
