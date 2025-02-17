@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ro" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecția 2</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"
+    />
+    <link rel="stylesheet" href="lectia-2.css" />
+
+    <link
+      rel="icon"
+      href="../../assets/favicon_lessons.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <audio id="backgroundMusic" loop>
+      <source
+        src="../../assets/music/Traditional gregorian chant - O filii et filiae.mp3"
+        type="audio/mp3"
+      />
+    </audio>
+    <div class="app-container">
+      <!-- Ecran de start -->
+      <div id="error-container" class="hidden"></div>
+      <div class="welcome-screen">
+        <button class="start-btn">Începe lecția</button>
+      </div>
+
+      <!-- Ecran cu titlu mare -->
+      <div class="title-screen hidden">
+        <div class="title-wrapper">
+          <h1 class="title"></h1>
+        </div>
+      </div>
+
+      <!-- Bara de navigație -->
+      <div class="nav-bar hidden">
+        <h1 class="nav-title"></h1>
+      </div>
+
+      <!-- Vizualizare teleprompter -->
+      <div class="teleprompter-view hidden">
+        <div class="content-container">
+          <!-- Aici lipesti continutul -->
+          <!-- Martiri și Moaște -->
+          <h2 class="subtitle">Primii creștini</h2>
+
+          <div class="paragraph">
+            După Înălțarea lui Iisus la cer, urmașii Săi, primii creștini, s-au
+            răspândit în toate colțurile lumii, dar în special în Imperiului
+            Roman, propovăduind Evanghelia și îndemnând oamenii să se întoarcă
+            la Dumnezeu. La început, erau priviți doar ca o sectă iudaică, însă
+            curând mesajul lor a început să atragă tot mai mulți adepți.
+          </div>
+          <div class="image-container">
+            <img
+              src="assets/lectia-2/early-christians.webp"
+              alt="Primii creștini propovăduind Evanghelia"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Primii creștini răspândind mesajul Evangheliei în Imperiul Roman
+            </div>
+          </div>
+          <div class="paragraph">
+            Această creștere rapidă a numărului de credincioși, atât dintre
+            evrei, cât și dintre păgâni, a stârnit suspiciuni în rândul
+            autorităților romane. Curajul creștinilor de a refuza cultul
+            împăratului i-a transformat în dușmani ai statului, marcând
+            începutul unei perioade întunecate de persecuții.
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-2/raspandirea-crestinismului.jpg"
+              alt="Primii creștini propovăduind Evanghelia"
+              class="figure-image"
+            />
+          </div>
+
+          <h2 class="subtitle">Romanii și religia</h2>
+
+          <div class="paragraph">
+            În Imperiul Roman, religia și politica erau strâns legate. Deși Roma
+            permitea diversitatea credințelor, toate popoarele supuse erau
+            obligate să venereze zeii Romei și să aducă jertfe împăratului,
+            considerat un fiu al divinității. Creștinii, însă, refuzau acest
+            lucru.
+          </div>
+          <div class="image-container">
+            <img
+              src="assets/lectia-2/roman-gods-family.jpg"
+              alt="Arborele genealogic al zeilor romani"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Arborele genealogic al zeilor romani, la care creștinii refuzau să
+              se închine
+            </div>
+          </div>
+          <div class="paragraph">
+            Această atitudine a fost percepută ca o amenințare la adresa ordinii
+            publice. Oficialii romani vedeau în creștinism un pericol, un cult
+            ilegal care putea submina stabilitatea imperiului. Creștinii
+            mărturiseau că există un singur Dumnezeu adevărat și un singur Domn,
+            Iisus Hristos.
+          </div>
+
+          <div class="paragraph">
+            Populația păgână îi acuza pe creștini de tot felul de nenorociri, de
+            la incendii la epidemii. Se credea că refuzul lor de a participa la
+            ritualurile tradiționale atrăgea mânia zeilor asupra întregului
+            imperiu, ceea ce a intensificat ostilitatea față de ei.
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-2/roman-temple.webp"
+              alt="Templu roman cu ritual de sacrificiu"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Ritual de sacrificiu într-un templu roman, pe care creștinii
+              refuzau să îl practice
+            </div>
+          </div>
+
+          <h2 class="subtitle">Începutul persecuțiilor</h2>
+
+          <div class="paragraph">
+            Primele persecuții au fost sporadice și locale, însă cel care a
+            declanșat prima mare prigoană împotriva creștinilor a fost împăratul
+            Nero, în anul 64 d.Hr. După marele incendiu al Romei, în căutarea
+            unui țap ispășitor, Nero a dat vina pe creștini și a ordonat
+            arestarea și executarea lor.
+          </div>
+
+          <div class="paragraph">
+            Unii au fost aruncați fiarelor în arene, alții răstigniți sau arși
+            de vii, servind drept „torțe vii" pentru a lumina grădinile
+            imperiale. Aceste execuții brutale au marcat începutul unei ere de
+            persecuții sistematice împotriva creștinilor.
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-2/nero-persecution.webp"
+              alt="Persecuția lui Nero"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Martirii creștini în timpul persecuției lui Nero
+            </div>
+          </div>
+
+          <div class="paragraph">
+            În deceniile ce au urmat, persecuțiile au continuat în valuri,
+            intensificându-se sub domnia împăraților Domițian, Decius, Valerian
+            și Dioclețian. Creștinii erau adesea denunțați de vecini, trădați de
+            rude sau chiar prinși în timpul adunărilor secrete de rugăciune.
+          </div>
+
+          <div class="paragraph">
+            Autoritățile încercau să-i forțeze să renunțe la credință,
+            cerându-le să jertfească zeilor sau să se închine împăratului. Cei
+            care refuzau erau torturați și uciși, devenind martiri ai credinței
+            lor neclintite.
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-2/christian-martyrs.jpg"
+              alt="Martiri creștini în arenă"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Martiri creștini înfruntând fiarele în arena romană
+            </div>
+          </div>
+
+          <div class="paragraph">
+            Martirajul nu era doar o execuție, ci un spectacol menit să
+            descurajeze pe alții. Creștinii erau expuși în arenele romane, unde
+            erau sfâșiați de lei sau obligați să lupte ca gladiatori. Cu toate
+            acestea, în loc să stârnească frica, aceste execuții întăreau și mai
+            mult credința creștină.
+          </div>
+
+          <div class="paragraph">
+            Mulți dintre cei care asistau la execuții se converteau, uimiți de
+            curajul și pacea interioară a martirilor. Acest fenomen a dus la o
+            creștere paradoxală a numărului de creștini, confirmând celebra
+            expresie că "sângele martirilor este sămânța creștinilor".
+          </div>
+
+          <h2 class="subtitle">Nașterea cultului sfinților și a moaștelor</h2>
+
+          <div class="paragraph">
+            După fiecare martiriu, creștinii adunau trupurile celor uciși și le
+            îngropau cu evlavie. Mormintele martirilor deveneau locuri de
+            rugăciune, iar amintirea lor era cinstită prin slujbe și sărbători
+            anuale. Această practică a pus bazele cultului sfinților martiri.
+          </div>
+
+          <div class="paragraph">
+            Unul dintre cele mai vechi exemple este cel al Sfântului Policarp al
+            Smirnei, martirizat în anul 155 d.Hr. După moartea sa prin ardere pe
+            rug, creștinii au strâns cu grijă oasele sale, pe care le-au
+            considerat „mai prețioase decât aurul și decât pietrele scumpe".
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-2/sfinte-moaste.jpg"
+              alt="Sfinte Moaște"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Racla cu Sfinte Moaște într-o biserică ortodoxă
+            </div>
+          </div>
+
+          <div class="paragraph">
+            Cu timpul, moaștele au fost așezate în biserici, iar locurile unde
+            erau îngropați martirii au devenit centre de pelerinaj. Se spune că
+            multe dintre acestea emanau o mireasmă plăcută, iar la atingerea lor
+            se săvârșeau minuni de vindecare.
+          </div>
+
+          <div class="paragraph">
+            Un exemplu renumit este cel al Sfântului Dimitrie Izvorâtorul de
+            Mir, din mormântul căruia izvora mir tămăduitor. Asemenea cazuri au
+            întărit credința oamenilor în sfințenia moaștelor și în puterea
+            mijlocirii sfinților martiri.
+          </div>
+
+          <h2 class="subtitle">Victoria credinței</h2>
+
+          <div class="paragraph">
+            Deși Imperiul Roman a încercat să stârpească creștinismul prin sânge
+            și teroare, numărul credincioșilor a crescut neîncetat. În anul 313,
+            împăratul Constantin cel Mare a dat Edictul de la Milano, prin care
+            creștinismul a devenit religie permisă în imperiu.
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-2/constantin-milan.jpg"
+              alt="Constantin cel Mare"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Constantin cel Mare semnând Edictul de la Milano
+            </div>
+          </div>
+
+          <div class="paragraph">
+            Martirii, odinioară prigoniți, au fost recunoscuți ca eroi ai
+            credinței, iar moaștele lor au fost scoase din catacombe și așezate
+            în biserici. Aceasta a marcat începutul unei noi ere pentru
+            creștinism, care a devenit treptat religia dominantă a imperiului.
+          </div>
+
+          <div class="paragraph">
+            Astăzi, cultul sfinților și al sfintelor moaște rămâne o mărturie
+            vie a credinței dintâi, un pod între trecut și prezent, între pământ
+            și cer. Moaștele martirilor nu sunt doar relicve, ci semne ale
+            biruinței vieții asupra morții.
+          </div>
+
+          <div class="paragraph">
+            Astfel, prin sângele martirilor s-a pecetluit temelia (fundația)
+            Bisericii, iar prin moaștele lor se păstrează viu duhul celor care,
+            cu prețul vieții, au luminat calea credinței noastre. Jertfa lor
+            continuă să inspire și să întărească credința creștinilor din toate
+            timpurile.
+          </div>
+
+          <h2 class="subtitle">
+            Temei Biblic și Aspecte Esențiale despre Sfintele Moaște
+          </h2>
+
+          <div class="paragraph">
+            Iată aspectele fundamentale despre sfintele moaște:
+          </div>
+
+          <ul class="content-list">
+            <li>
+              În Cartea a IV-a a Regilor (13:21) este relatată o minune
+              remarcabilă: "Dar iată, odată, când îngropau un mort, s-a
+              întâmplat ca cei ce-l îngropau să vadă una din aceste cete și,
+              speriindu-se, au aruncat mortul în mormântul lui Elisei. Căzând
+              acela, s-a atins de oasele lui Elisei și a înviat și s-a sculat pe
+              picioarele sale."
+            </li>
+            <li>
+              Acest eveniment biblic demonstrează că încă din Vechiul Testament,
+              Dumnezeu a ales să lucreze prin rămășițele pământești ale
+              sfinților Săi
+            </li>
+            <li>
+              Minunea reprezintă un precedent important pentru înțelegerea
+              puterii sfințitoare prezente în moaștele sfinților
+            </li>
+          </ul>
+
+          <h2 class="subtitle">Definiție și Semnificație</h2>
+
+          <ul class="content-list">
+            <li>
+              Sfintele moaște reprezintă trupurile întregi neputrezite,
+              fragmente de trupuri neputrezite sau oseminte ale sfinților
+            </li>
+            <li>Includ și veșminte sau obiecte care au aparținut sfinților</li>
+            <li>
+              Starea de nestricăciune este o urmare firească (dar nu
+              obligatorie) a îndumnezeirii trupului din timpul vieții
+            </li>
+          </ul>
+
+          <h2 class="subtitle">Dovezi Istorice ale Cinstirii Moaștelor</h2>
+
+          <div class="paragraph">Biserica Primară:</div>
+          <ul class="content-list">
+            <li>Sfânta Liturghie era săvârșită pe mormintele martirilor</li>
+            <li>
+              Prima dovadă documentată: Epistola Bisericii din Smirna despre
+              martirul Sfântul Policarp (155 d.Hr.)
+            </li>
+            <li>
+              Descoperiri arheologice importante: Moaștele mucenicilor Zoticos,
+              Atalos, Filipos și Kamasis la Niculițel, Dobrogea
+            </li>
+          </ul>
+
+          <div class="paragraph">Exemple Remarcabile:</div>
+          <ul class="content-list">
+            <li>
+              Mâna dreaptă a Sfântului Ioan Botezătorul în Antiohia (900 de ani)
+            </li>
+            <li>Moaștele Sfântului Sava (flexibile după 1500 de ani)</li>
+            <li>Capul Sfântului Ioan Botezătorul la Damasc</li>
+          </ul>
+
+          <h2 class="subtitle">
+            Caracteristici Distincte ale Sfintelor Moaște
+          </h2>
+
+          <div class="paragraph">Semne ale Autenticității:</div>
+          <ul class="content-list">
+            <li>Neputrezirea naturală (fără intervenție umană)</li>
+            <li>Mireasma divină specifică</li>
+            <li>Proprietăți taumaturgice (făcătoare de minuni)</li>
+            <li>Flexibilitatea membrelor în unele cazuri</li>
+          </ul>
+
+          <div class="paragraph">Diferențe față de Mumificare:</div>
+          <ul class="content-list">
+            <li>Nu implică tehnici de conservare</li>
+            <li>Păstrează calități supranaturale</li>
+            <li>Manifestă puteri tămăduitoare</li>
+          </ul>
+
+          <h2 class="subtitle">Modalități de Cinstire în Biserica Ortodoxă</h2>
+
+          <div class="paragraph">Practici Liturgice:</div>
+          <ul class="content-list">
+            <li>Încorporarea în sfintele altare ale bisericilor</li>
+            <li>Organizarea de pelerinaje</li>
+            <li>Procesiuni pentru diferite trebuințe (secetă, necazuri)</li>
+            <li>Sărbători dedicate descoperirii sau mutării moaștelor</li>
+          </ul>
+
+          <div class="paragraph">Practici Individuale:</div>
+          <ul class="content-list">
+            <li>Închinarea</li>
+            <li>Atingerea și sărutarea moaștelor</li>
+            <li>Rugăciunea la moaștele sfinților</li>
+            <li>Participarea la procesiuni</li>
+          </ul>
+
+          <h2 class="subtitle">Semnificația Teologică</h2>
+
+          <ul class="content-list">
+            <li>Prezența harului divin și după moartea sfântului</li>
+            <li>Legătura personală între credincioși și sfinți</li>
+            <li>Mărturie a biruinței vieții asupra morții</li>
+            <li>
+              Continuitatea prezenței sfântului în comunitatea credincioșilor
+            </li>
+          </ul>
+          <!-- alte texte vor urma in continuare -->
+
+          <!-- pana aici lipesti continutul -->
+        </div>
+      </div>
+      <!-- Selector student -->
+      <div class="student-selector hidden">
+        <div
+          class="student-card"
+          data-tooltip="Apasă tasta 'e' sau ➔ pentru a alege următorul elev"
+        >
+          <div class="student-name"></div>
+        </div>
+      </div>
+
+      <!-- Controale laterale -->
+      <div class="side-controls left hidden">
+        <button
+          class="control-btn"
+          id="speed-down"
+          data-tooltip="Micșorează viteza de redare"
+        >
+          <i data-lucide="rewind"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="play-pause"
+          data-tooltip="Pornește/Pauză"
+        >
+          <i data-lucide="play"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="speed-up"
+          data-tooltip="Mărește viteza de redare"
+        >
+          <i data-lucide="fast-forward"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="sound-toggle"
+          data-tooltip="Pornește sunetul (M)"
+        >
+          <i data-lucide="volume-x"></i>
+        </button>
+      </div>
+
+      <div class="side-controls right">
+        <button class="control-btn" id="zoom-in" data-tooltip="Mărește textul">
+          <i data-lucide="zoom-in"></i>
+        </button>
+        <button class="theme-toggle" data-tooltip="Schimbă tema">
+          <i data-lucide="moon"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="zoom-out"
+          data-tooltip="Micșorează textul"
+        >
+          <i data-lucide="zoom-out"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="fullscreen-toggle"
+          data-tooltip="Comută ecran complet"
+        >
+          <i data-lucide="maximize"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="lectia-2.js"></script>
+  </body>
+</html>

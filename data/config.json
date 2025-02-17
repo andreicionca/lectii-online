@@ -4,7 +4,8 @@
     "Religie clasa a X-a",
     "Religie clasa a XI-a",
     "Religie clasa a XII-a",
-    "Religie cultură generală"
+    "Religie cultură generală",
+    "Testare platforma"
   ],
 
   "classes": {
@@ -13,6 +14,32 @@
     "Religie clasa a XI-a": ["11A", "11B", "11C", "11D", "11E"],
     "Religie clasa a XII-a": ["12A", "12B", "12C", "12D"],
     "Religie cultură generală": [
+      "9A",
+      "9B",
+      "9C",
+      "9D",
+      "9E",
+      "9F",
+      "10A",
+      "10B",
+      "10C",
+      "10D",
+      "10E",
+      "10F",
+      "11A",
+      "11B",
+      "11C",
+      "11D",
+      "11E",
+      "",
+      "12A",
+      "12B",
+      "12C",
+      "12D",
+      "",
+      ""
+    ],
+    "Testare platforma": [
       "9A",
       "9B",
       "9C",
@@ -65,7 +92,7 @@
       {
         "id": "lectia-2",
         "name": "Lecția 2",
-        "title": "Iudaismul",
+        "title": "Sfintele moaște în Biserica Ortodoxă",
         "path": "/religie/10/lectia-2.html"
       }
     ],
@@ -103,12 +130,20 @@
         "name": "Lecția 1",
         "title": "Personalități religioase",
         "path": "/religie/cultura-generala/lectia-1.html"
-      },
+      }
+    ],
+    "Testare platforma": [
       {
         "id": "testare-platforma",
         "name": "Testare platforma",
         "title": "Testare platforma",
-        "path": "/religie/cultura-generala/testare-platforma.html"
+        "path": "/template/testare-platforma.html"
+      },
+      {
+        "id": "template-1",
+        "name": "Template 1",
+        "title": "Template 1",
+        "path": "/template/template-1.html"
       }
     ]
   },

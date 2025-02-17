@@ -1,4 +1,4 @@
-// pagina /lectii/general/lectia-1-v2.js
+// pagina /testare-platforma.js
 
 // Selectăm elementele DOM
 const welcomeScreen = document.querySelector(".welcome-screen");
@@ -26,7 +26,7 @@ const fullscreenToggle = document.getElementById("fullscreen-toggle");
 // Configurrări inițiale principale pentru lecție
 
 backgroundMusic.volume = 0.5; // Setăm volumul inițial la 50%
-const titleText = "Personalități religioase"; // Textul titlului
+const titleText = "Testare platforma"; // Textul titlului
 const TITLE_ANIMATION_DURATION = 3500; // durata animației typing in milisecunde
 const POST_ANIMATION_DELAY = 3500; // delay după animație în milisecunde
 
