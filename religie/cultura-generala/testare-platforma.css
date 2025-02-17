@@ -14,7 +14,7 @@
   --nav-bg: #f5f5f5;
   --control-bg: #e8e8e8;
   --control-hover: #d1d1d1;
-  --base-font-size: 36px; /* Mărim dimensiunea default */
+  --base-font-size: 32px; /* Mărim dimensiunea default */
   --zoom-level: 1;
 }
 
@@ -27,6 +27,7 @@
   --nav-bg: #1a1a1a;
   --control-bg: #1e1e1e;
   --control-hover: #2a2a2a;
+  --text-weight: 200;
 }
 
 body {
@@ -86,7 +87,12 @@ body {
 }
 
 .title-wrapper {
+  max-width: 80vw;
+  margin: 0 auto;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
@@ -94,13 +100,24 @@ body {
   font-weight: 600;
   text-align: center;
   color: var(--text-color);
-  border-right: 3px solid var(--accent-color);
+}
+
+.title-line {
   white-space: nowrap;
   overflow: hidden;
   width: 0;
+  margin: 0 auto;
 }
 
-.title.typewriter {
+.title-line.active {
+  border-right: 3px solid var(--accent-color);
+}
+
+.title-line.typewriter {
+  animation: typing 3.5s steps(30, end) forwards;
+}
+
+.title-line.active.typewriter {
   animation: typing 3.5s steps(30, end) forwards,
     blink-caret 0.75s step-end infinite;
 }
@@ -110,7 +127,7 @@ body {
     width: 0;
   }
   to {
-    width: 100%;
+    width: var(--line-content-width);
   }
 }
 
@@ -197,10 +214,10 @@ body {
 
 /* Stiluri text */
 .subtitle {
-  font-size: calc(40px * var(--zoom-level));
+  font-size: calc(48px * var(--zoom-level));
   font-weight: 600;
   color: var(--secondary-text);
-  margin: 40px 0 20px;
+  margin-top: 40px;
 }
 
 .paragraph {
@@ -212,11 +229,35 @@ body {
 
 .figure-image {
   width: 100%;
-  max-width: 1200px; /* să fie consistent cu max-width-ul din .teleprompter-view */
+  max-width: 1200px;
   height: auto;
-  margin: 20px 0; /* să fie consistent cu spacing-ul tău existent */
+  margin: 20px 0;
   display: block;
   border-radius: 8px;
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 15px;
+  padding: 12px 20px;
+  text-align: center;
+  font-size: calc(17px * var(--zoom-level));
+  line-height: 1.4;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  backdrop-filter: blur(3px);
 }
 
 /* Theme toggle */
@@ -270,6 +311,8 @@ body {
   justify-content: center;
   cursor: pointer;
   transition: transform 0.2s, background-color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  outline: none !important;
 }
 
 /* Hover și Active */
@@ -442,4 +485,158 @@ body {
 
 .hidden {
   display: none !important;
+}
+
+/* Adăugăm media queries pentru mobile */
+/* Adăugăm media queries pentru mobile */
+/* Adăugăm media queries pentru mobile */
+@media screen and (max-width: 768px) {
+  :root {
+    --base-font-size: 18px;
+  }
+
+  .content-container {
+    padding: 80px 80px;
+  }
+
+  .teleprompter-view {
+    height: calc(100vh - 90px);
+    width: 95%;
+    margin: 40px auto 0;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  /* Tipografie */
+  .subtitle {
+    font-size: calc(28px * var(--zoom-level));
+    margin-top: 20px;
+  }
+
+  .paragraph {
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+  }
+
+  /* Imagini */
+  .figure-image {
+    margin: 5px 0;
+  }
+
+  .image-caption {
+    padding: 10px 15px;
+    font-size: calc(14px * var(--zoom-level));
+    line-height: 1.35;
+  }
+
+  /* Navigație */
+  .nav-bar {
+    height: 40px;
+  }
+
+  .nav-title {
+    font-size: 16px;
+  }
+
+  /* Controale laterale */
+  .side-controls {
+    gap: 8px;
+  }
+
+  .side-controls.left {
+    left: 12px;
+  }
+
+  .side-controls.right {
+    right: 12px;
+  }
+
+  .side-controls .control-btn,
+  .theme-toggle {
+    padding: 6px;
+    width: 28px;
+    height: 28px;
+    opacity: 0.6;
+  }
+
+  .side-controls .control-btn i,
+  .theme-toggle i {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Ascundem selectorul de studenți */
+  .student-selector {
+    display: none;
+  }
+}
+
+/* Telefoane și ecrane mici */
+@media screen and (max-width: 480px) {
+  :root {
+    --base-font-size: 16px;
+  }
+
+  .content-container {
+    padding: 60px 35px;
+  }
+  .title {
+    font-size: 30px;
+  }
+
+  /* Tipografie - ajustări suplimentare pentru ecrane mici */
+  .subtitle {
+    font-size: calc(22px * var(--zoom-level));
+    margin-top: 15px;
+  }
+
+  .paragraph {
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+    font-weight: var(--text-weight);
+    text-align: left;
+  }
+  .image-caption {
+    padding: 6px 8px;
+    font-size: calc(10px * var(--zoom-level));
+    line-height: 1.3;
+  }
+  /* Controale - mai mici pentru telefoane */
+  .side-controls .control-btn,
+  .theme-toggle {
+    padding: 5px;
+    width: 26px;
+    height: 26px;
+    opacity: 0.5;
+  }
+
+  .side-controls .control-btn i,
+  .theme-toggle i {
+    width: 14px;
+    height: 14px;
+  }
+
+  .side-controls.left {
+    left: 8px;
+  }
+
+  .side-controls.right {
+    right: 8px;
+  }
+
+  /* Ajustări suplimentare pentru navigație */
+  .nav-bar {
+    height: 35px;
+  }
+
+  .nav-title {
+    font-size: 14px;
+  }
+
+  /* Ajustări pentru imagini */
+  .figure-image {
+    margin: 3px 0;
+  }
 }

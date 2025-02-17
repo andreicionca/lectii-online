@@ -1,12 +1,18 @@
 {
-  "grades": ["9", "10", "11", "12", "General"],
+  "grades": [
+    "Religie clasa a IX-a",
+    "Religie clasa a X-a",
+    "Religie clasa a XI-a",
+    "Religie clasa a XII-a",
+    "Religie cultură generală"
+  ],
 
   "classes": {
-    "9": ["9A", "9B", "9C", "9D", "9E", "9F"],
-    "10": ["10A", "10B", "10C", "10D", "10E", "10F"],
-    "11": ["11A", "11B", "11C", "11D", "11E"],
-    "12": ["12A", "12B", "12C", "12D"],
-    "General": [
+    "Religie clasa a IX-a": ["9A", "9B", "9C", "9D", "9E", "9F"],
+    "Religie clasa a X-a": ["10A", "10B", "10C", "10D", "10E", "10F"],
+    "Religie clasa a XI-a": ["11A", "11B", "11C", "11D", "11E"],
+    "Religie clasa a XII-a": ["12A", "12B", "12C", "12D"],
+    "Religie cultură generală": [
       "9A",
       "9B",
       "9C",
@@ -35,74 +41,74 @@
   },
 
   "lessons": {
-    "9": [
+    "Religie clasa a IX-a": [
       {
         "id": "lectia-1",
         "name": "Lecția 1",
         "title": "Introducere în Religie",
-        "path": "/lectii/9/lectia-1.html"
+        "path": "/religie/9/lectia-1.html"
       },
       {
         "id": "lectia-2",
         "name": "Lecția 2",
         "title": "Creștinismul",
-        "path": "/lectii/9/lectia-2.html"
+        "path": "/religie/9/lectia-2.html"
       }
     ],
-    "10": [
+    "Religie clasa a X-a": [
       {
         "id": "lectia-1",
         "name": "Lecția 1",
         "title": "Introducere în Religie",
-        "path": "/lectii/10/lectia-1.html"
+        "path": "/religie/10/lectia-1.html"
       },
       {
         "id": "lectia-2",
         "name": "Lecția 2",
         "title": "Iudaismul",
-        "path": "/lectii/10/lectia-2.html"
+        "path": "/religie/10/lectia-2.html"
       }
     ],
-    "11": [
+    "Religie clasa a XI-a": [
       {
         "id": "lectia-1",
         "name": "Lecția 1",
         "title": "Introducere în Religie",
-        "path": "/lectii/11/lectia-1.html"
+        "path": "/religie/11/lectia-1.html"
       },
       {
         "id": "lectia-2",
         "name": "Lecția 2",
         "title": "Islamul",
-        "path": "/lectii/11/lectia-2.html"
+        "path": "/religie/11/lectia-2.html"
       }
     ],
-    "12": [
+    "Religie clasa a XII-a": [
       {
         "id": "lectia-1",
         "name": "Lecția 1",
         "title": "Introducere în Religie",
-        "path": "/lectii/12/lectia-1.html"
+        "path": "/religie/12/lectia-1.html"
       },
       {
         "id": "lectia-2",
         "name": "Lecția 2",
         "title": "Budismul",
-        "path": "/lectii/12/lectia-2.html"
+        "path": "/religie/12/lectia-2.html"
       }
     ],
-    "General": [
+    "Religie cultură generală": [
       {
         "id": "lectia-1",
         "name": "Lecția 1",
         "title": "Personalități religioase",
-        "path": "/lectii/general/lectia-1.html"
+        "path": "/religie/cultura-generala/lectia-1.html"
       },
       {
-        "id": "lectia-1-v2",
-        "name": "Lecția 1 v2",
-        "title": "Personalități religioase v2",
-        "path": "/lectii/general/lectia-1-v2.html"
+        "id": "testare-platforma",
+        "name": "Testare platforma",
+        "title": "Testare platforma",
+        "path": "/religie/cultura-generala/testare-platforma.html"
       }
     ]
   },

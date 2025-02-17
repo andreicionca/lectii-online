@@ -1,4 +1,4 @@
-// pagina /lectii/general/lectia-1.js
+// pagina /lectii/general/lectia-1-v2.js
 
 // Selectăm elementele DOM
 const welcomeScreen = document.querySelector(".welcome-screen");
@@ -27,8 +27,8 @@ const fullscreenToggle = document.getElementById("fullscreen-toggle");
 
 backgroundMusic.volume = 0.5; // Setăm volumul inițial la 50%
 const titleText = "Personalități religioase"; // Textul titlului
-const TITLE_ANIMATION_DURATION = 4000; // durata animației typing in milisecunde
-const POST_ANIMATION_DELAY = 4000; // delay după animație în milisecunde
+const TITLE_ANIMATION_DURATION = 3500; // durata animației typing in milisecunde
+const POST_ANIMATION_DELAY = 3500; // delay după animație în milisecunde
 
 // Configurare pentru viteze
 const speedLevels = {
@@ -86,7 +86,7 @@ currentStudents.forEach((student) => {
 normalizeTracking();
 
 // Configurare inițială
-let isMuted = false;
+let isMuted = true;
 let isMusicPlaying = false;
 let isPlaying = false;
 let scrollSpeed = speedLevels["4"]; // Pornim cu o viteză confortabilă (tasta 4)
@@ -106,6 +106,7 @@ const maxZoom = 2;
 // Funcție pentru toggle temă
 function toggleTheme() {
   document.documentElement.classList.toggle("dark");
+
   const themeIcon = themeToggle.querySelector("[data-lucide]");
 
   if (document.documentElement.classList.contains("dark")) {
@@ -131,12 +132,59 @@ function toggleFullscreen() {
     fullscreenToggle.setAttribute("data-tooltip", "Comută ecran complet");
   }
 }
-
 function startLesson() {
   welcomeScreen.classList.add("hidden");
   titleScreen.classList.remove("hidden");
-  lessonTitle.textContent = titleText;
-  lessonTitle.classList.add("typewriter");
+  lessonTitle.innerHTML = "";
+
+  const words = titleText.split(" ");
+  let lines = [];
+  let currentLine = [];
+
+  let tempDiv = document.createElement("div");
+  tempDiv.style.visibility = "hidden";
+  tempDiv.style.position = "absolute";
+  tempDiv.style.fontSize = getComputedStyle(lessonTitle).fontSize;
+  tempDiv.style.fontFamily = getComputedStyle(lessonTitle).fontFamily;
+  tempDiv.style.fontWeight = getComputedStyle(lessonTitle).fontWeight;
+  tempDiv.style.whiteSpace = "nowrap";
+  document.body.appendChild(tempDiv);
+
+  const maxWidth = window.innerWidth * 0.8;
+
+  words.forEach((word) => {
+    tempDiv.textContent = [...currentLine, word].join(" ");
+    const currentWidth = tempDiv.getBoundingClientRect().width;
+
+    if (currentWidth <= maxWidth) {
+      currentLine.push(word);
+    } else {
+      if (currentLine.length > 0) {
+        lines.push(currentLine.join(" "));
+        currentLine = [word];
+      } else {
+        lines.push(word);
+      }
+    }
+  });
+
+  if (currentLine.length > 0) {
+    lines.push(currentLine.join(" "));
+  }
+
+  lines.forEach((line, index) => {
+    const lineDiv = document.createElement("div");
+    lineDiv.className = "title-line";
+    lineDiv.textContent = line;
+
+    tempDiv.textContent = line;
+    const exactWidth = tempDiv.getBoundingClientRect().width;
+    lineDiv.style.setProperty("--line-content-width", `${exactWidth}px`);
+
+    lessonTitle.appendChild(lineDiv);
+  });
+
+  document.body.removeChild(tempDiv);
 
   document.documentElement.requestFullscreen().catch((err) => {
     showError(
@@ -144,10 +192,38 @@ function startLesson() {
     );
   });
 
-  titleTimeout = setTimeout(() => {
-    startTeleprompter();
-  }, TITLE_ANIMATION_DURATION + POST_ANIMATION_DELAY);
+  const lineElements = document.querySelectorAll(".title-line");
+  const TYPING_DURATION = 3500;
+
+  const animateLine = (index) => {
+    if (index >= lineElements.length) {
+      setTimeout(() => {
+        startTeleprompter();
+      }, POST_ANIMATION_DELAY);
+      return;
+    }
+
+    const line = lineElements[index];
+
+    if (index > 0) {
+      setTimeout(() => {
+        lineElements[index - 1].classList.remove("active");
+        line.classList.add("active", "typewriter");
+      }, 100);
+    } else {
+      line.classList.add("active", "typewriter");
+    }
+
+    setTimeout(() => {
+      animateLine(index + 1);
+    }, TYPING_DURATION);
+  };
+
+  setTimeout(() => {
+    animateLine(0);
+  }, 100);
 }
+
 // Funcție pentru fade in/out
 function fadeAudio(shouldPlay) {
   const fadePoints = 20; // Numărul de pași pentru fade
@@ -486,6 +562,52 @@ teleprompterView.addEventListener("wheel", (e) => {
     isManualScrolling = true;
     deltaY = e.deltaY * 0.5;
   }
+});
+
+// Variabile pentru gestionarea touch events
+let touchStartY = 0;
+let lastTouchY = 0;
+let touchScrollSpeed = 1.5; // Factor pentru viteza de scroll pe mobile
+
+// Adăugăm event listeners pentru touch events
+teleprompterView.addEventListener("touchstart", (e) => {
+  touchStartY = e.touches[0].clientY;
+  lastTouchY = touchStartY;
+});
+
+teleprompterView.addEventListener("touchmove", (e) => {
+  e.preventDefault(); // Prevenim scroll-ul implicit
+  const currentTouchY = e.touches[0].clientY;
+  const touchDelta = lastTouchY - currentTouchY;
+  lastTouchY = currentTouchY;
+
+  if (!isPlaying) {
+    // Când teleprompterul este oprit
+    const currentTransform = getComputedStyle(contentContainer).transform;
+    const matrix = new DOMMatrixReadOnly(currentTransform);
+    const currentY = matrix.m42;
+
+    // Calculăm noua poziție
+    const newY = currentY - touchDelta * touchScrollSpeed;
+
+    // Verificăm limitele
+    if (newY <= -totalHeight) {
+      contentContainer.style.transform = `translate3d(0, ${-totalHeight}px, 0)`;
+    } else if (newY >= viewportHeight) {
+      contentContainer.style.transform = `translate3d(0, ${viewportHeight}px, 0)`;
+    } else {
+      contentContainer.style.transform = `translate3d(0, ${newY}px, 0)`;
+    }
+  } else {
+    // Când teleprompterul rulează
+    isManualScrolling = true;
+    deltaY = touchDelta * touchScrollSpeed;
+  }
+});
+
+teleprompterView.addEventListener("touchend", () => {
+  touchStartY = 0;
+  lastTouchY = 0;
 });
 
 // Keyboard controls
