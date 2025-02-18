@@ -218,6 +218,7 @@ body {
   font-weight: 600;
   color: var(--secondary-text);
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .h3 {
