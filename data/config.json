@@ -94,6 +94,12 @@
         "name": "Lecția 2",
         "title": "Sfintele moaște în Biserica Ortodoxă",
         "path": "/religie/10/lectia-2.html"
+      },
+      {
+        "id": "lectia-3",
+        "name": "Lecția 3",
+        "title": "Decalogul sau Cele zece Porunci",
+        "path": "/religie/10/lectia-3.html"
       }
     ],
     "Religie clasa a XI-a": [
@@ -158,6 +164,8 @@
       "Ciurdaș Iosif",
       "Costin Carla",
       "Cozma Danusia",
+
+      "Crișan Matei",
       "Danya Lorena",
       "Dragoș Denis",
       "Herman Rareș",

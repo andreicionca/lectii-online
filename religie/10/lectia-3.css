@@ -1,0 +1,709 @@
+/* Reset și configurare de bază */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variabile pentru teme */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --secondary-text: #222222;
+  --accent-color: #2a2a2a;
+  --nav-bg: #f5f5f5;
+  --control-bg: #e8e8e8;
+  --control-hover: #d1d1d1;
+  --base-font-size: 32px; /* Mărim dimensiunea default */
+  --zoom-level: 1;
+}
+
+/* Tema întunecată */
+.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --secondary-text: #cccccc;
+  --accent-color: #a0a0a0;
+  --nav-bg: #1a1a1a;
+  --control-bg: #1e1e1e;
+  --control-hover: #2a2a2a;
+  --text-weight: 200;
+}
+
+body {
+  font-family: "Source Sans Pro", system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.8;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Container principal */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Ecran de start */
+.welcome-screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  z-index: 10;
+}
+
+.start-btn {
+  padding: 20px 40px;
+  font-size: 24px;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.start-btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* Ecran cu titlu mare */
+.title-screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  z-index: 9;
+}
+
+.title-wrapper {
+  max-width: 80vw;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 72px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.title-line {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  margin: 0 auto;
+}
+
+.title-line.active {
+  border-right: 3px solid var(--accent-color);
+}
+
+.title-line.typewriter {
+  animation: typing 3.5s steps(30, end) forwards;
+}
+
+.title-line.active.typewriter {
+  animation: typing 3.5s steps(30, end) forwards,
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--line-content-width);
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--accent-color);
+  }
+}
+
+/* Bara de navigație */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: var(--nav-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.nav-title {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+/* Teleprompter */
+.teleprompter-view {
+  height: calc(100vh - 110px);
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto 0;
+  overflow-y: hidden; /* Adăugăm overflow-y: auto pentru scrollbar */
+  position: relative;
+}
+/* Stilizare scrollbar pentru Webkit (Chrome, Safari, etc.) */
+.teleprompter-view::-webkit-scrollbar {
+  width: 8px;
+}
+
+.teleprompter-view::-webkit-scrollbar-track {
+  background: var(--control-bg);
+}
+
+.teleprompter-view::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+/* Efecte gradient */
+.teleprompter-view::before,
+.teleprompter-view::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.teleprompter-view::before {
+  top: 0;
+  background: linear-gradient(to bottom, var(--bg-color), transparent);
+}
+
+.teleprompter-view::after {
+  bottom: 0;
+  background: linear-gradient(to top, var(--bg-color), transparent);
+}
+
+/* Container conținut */
+.content-container {
+  padding: 100px 40px;
+  text-align: left;
+  transform: translateY(100%);
+}
+
+/* Headings suplimentare */
+.subtitle {
+  font-size: calc(48px * var(--zoom-level));
+  font-weight: 600;
+  color: var(--secondary-text);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.h3 {
+  font-size: calc(38px * var(--zoom-level));
+  font-weight: 500;
+  color: var(--secondary-text);
+  line-height: 1.4;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+/* Liste */
+.content-container ul,
+.content-container ol {
+  font-size: calc(var(--base-font-size) * var(--zoom-level));
+  margin: 20px 0;
+  padding-left: 40px;
+}
+
+.content-container li {
+  margin-bottom: 15px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Liste imbricate */
+.content-container ul ul,
+.content-container ol ol,
+.content-container ul ol,
+.content-container ol ul {
+  margin: 15px 0;
+}
+
+/* Stiluri text */
+.paragraph {
+  font-size: calc(var(--base-font-size) * var(--zoom-level));
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.figure-image {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: 20px 0;
+  display: block;
+  border-radius: 8px;
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 2px 20px;
+  text-align: center;
+  font-size: calc(17px * var(--zoom-level));
+  line-height: 1.4;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  backdrop-filter: blur(3px);
+}
+
+/* Theme toggle */
+[data-lucide] {
+  stroke: var(--text-color);
+  stroke-width: 2;
+  width: 20px;
+  height: 20px;
+}
+/* Controale laterale */
+.side-controls {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 100;
+}
+
+.side-controls.left {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.side-controls.right {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Iconițe pentru butoane */
+.side-controls .control-btn i,
+.theme-toggle i {
+  width: 20px;
+  height: 20px;
+  stroke: var(--text-color);
+  stroke-width: 2;
+}
+
+/* Stiluri butoane */
+.side-controls .control-btn,
+.theme-toggle {
+  background: var(--control-hover);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  outline: none !important;
+}
+
+/* Hover și Active */
+.control-btn:hover,
+.theme-toggle:hover {
+  background-color: var(--control-bg);
+  transform: scale(1.1);
+}
+
+.dark .control-btn:hover,
+.dark .theme-toggle:hover {
+  background-color: var(--accent-color);
+}
+
+.control-btn:active,
+.theme-toggle:active {
+  transform: scale(0.95);
+  transition: transform 0.1s;
+}
+
+/* Reset focus state */
+.control-btn:focus,
+.theme-toggle:focus {
+  outline: none;
+}
+
+/* Stiluri pentru tooltipuri */
+
+.student-card[data-tooltip]:hover::after,
+.control-btn[data-tooltip]:hover::after,
+.theme-toggle[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  background: var(--accent-color);
+  color: var(--bg-color);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.side-controls.left .control-btn[data-tooltip]:hover::after {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10px;
+}
+
+.student-card[data-tooltip]:hover::after,
+.side-controls.right .control-btn[data-tooltip]:hover::after,
+.side-controls.right .theme-toggle[data-tooltip]:hover::after {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 10px;
+}
+
+/* Stiluri pentru selectorul de studenți */
+
+.student-selector {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  background-color: var(--control-hover);
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 250px;
+  transition: transform 0.3s ease;
+  opacity: 0.8;
+}
+
+.student-selector:hover {
+  transform: translateY(-2px);
+}
+
+.student-card {
+  background-color: var(--bg-color);
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+}
+.student-name {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: monospace;
+  color: var(--text-color);
+  cursor: default;
+  text-transform: uppercase;
+}
+
+.flap-effect {
+  animation: flapEffect 0.05s linear;
+}
+
+@keyframes flapEffect {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.gradient-effect {
+  background: linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899, #f43f5e);
+  background-size: 200% 100%;
+  animation: gradientAnimation 1s linear infinite;
+}
+
+@keyframes textGradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.text-gradient-effect {
+  background: linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899, #f43f5e);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: textGradientAnimation 1s linear infinite;
+}
+
+/* Utilitar */
+.hidden {
+  display: none !important;
+}
+
+/* Stilizare erori */
+#error-container {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ef4444;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  z-index: 9999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Adăugăm media queries pentru mobile */
+/* Adăugăm media queries pentru mobile */
+/* Adăugăm media queries pentru mobile */
+@media screen and (max-width: 768px) {
+  :root {
+    --base-font-size: 18px;
+  }
+
+  .content-container {
+    padding: 80px 80px;
+  }
+
+  .teleprompter-view {
+    height: calc(100vh - 90px);
+    width: 95%;
+    margin: 40px auto 0;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  /* Tipografie */
+  .subtitle {
+    font-size: calc(28px * var(--zoom-level));
+  }
+
+  .h3 {
+    font-size: calc(24px * var(--zoom-level));
+    margin-bottom: 5px;
+  }
+
+  .content-container ul,
+  .content-container ol {
+    padding-left: 25px;
+    margin: 5px 0;
+  }
+
+  .content-container li {
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    margin-bottom: 5px;
+  }
+  .paragraph {
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    margin-bottom: 5px;
+  }
+
+  /* Imagini */
+  .figure-image {
+    margin: 5px 0;
+  }
+
+  .image-caption {
+    padding: 10px 15px;
+    font-size: calc(14px * var(--zoom-level));
+    line-height: 1.35;
+  }
+
+  /* Navigație */
+  .nav-bar {
+    height: 40px;
+  }
+
+  .nav-title {
+    font-size: 16px;
+  }
+
+  /* Controale laterale */
+  .side-controls {
+    gap: 8px;
+  }
+
+  .side-controls.left {
+    left: 12px;
+  }
+
+  .side-controls.right {
+    right: 12px;
+  }
+
+  .side-controls .control-btn,
+  .theme-toggle {
+    padding: 6px;
+    width: 28px;
+    height: 28px;
+    opacity: 0.6;
+  }
+
+  .side-controls .control-btn i,
+  .theme-toggle i {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Ascundem selectorul de studenți */
+  .student-selector {
+    display: none;
+  }
+}
+
+/* Telefoane și ecrane mici */
+@media screen and (max-width: 480px) {
+  :root {
+    --base-font-size: 16px;
+  }
+
+  .content-container {
+    padding: 60px 35px;
+  }
+  .title {
+    font-size: 30px;
+  }
+
+  /* Tipografie - ajustări suplimentare pentru ecrane mici */
+  .subtitle {
+    font-size: calc(22px * var(--zoom-level));
+  }
+
+  .h3 {
+    font-size: calc(20px * var(--zoom-level));
+    margin-bottom: 3px;
+  }
+
+  .content-container ul,
+  .content-container ol {
+    padding-left: 20px;
+    margin: 3px 0;
+  }
+
+  .content-container li {
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+    font-weight: var(--text-weight);
+    text-align: left;
+    margin-bottom: 3px;
+  }
+
+  .paragraph {
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+    font-weight: var(--text-weight);
+    text-align: left;
+    margin-bottom: 3px;
+  }
+  .image-caption {
+    padding: 6px 8px;
+    font-size: calc(10px * var(--zoom-level));
+    line-height: 1.3;
+  }
+  /* Controale - mai mici pentru telefoane */
+  .side-controls .control-btn,
+  .theme-toggle {
+    padding: 5px;
+    width: 26px;
+    height: 26px;
+    opacity: 0.5;
+  }
+
+  .side-controls .control-btn i,
+  .theme-toggle i {
+    width: 14px;
+    height: 14px;
+  }
+
+  .side-controls.left {
+    left: 8px;
+  }
+
+  .side-controls.right {
+    right: 8px;
+  }
+
+  /* Ajustări suplimentare pentru navigație */
+  .nav-bar {
+    height: 35px;
+  }
+
+  .nav-title {
+    font-size: 14px;
+  }
+
+  /* Ajustări pentru imagini */
+  .figure-image {
+    margin: 3px 0;
+  }
+}
