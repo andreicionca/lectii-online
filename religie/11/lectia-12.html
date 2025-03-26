@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ro" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecția 12</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"
+    />
+    <link rel="stylesheet" href="lectia-12.css" />
+
+    <link
+      rel="icon"
+      href="../../assets/favicon_lessons.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <audio id="backgroundMusic" loop>
+      <source
+        src="../../assets/music/Traditional gregorian chant - O filii et filiae.mp3"
+        type="audio/mp3"
+      />
+    </audio>
+    <div class="app-container">
+      <!-- Ecran de start -->
+      <div id="error-container" class="hidden"></div>
+      <div class="welcome-screen">
+        <button class="start-btn">Începe lecția</button>
+      </div>
+
+      <!-- Ecran cu titlu mare -->
+      <div class="title-screen hidden">
+        <div class="title-wrapper">
+          <h1 class="title"></h1>
+        </div>
+      </div>
+
+      <!-- Bara de navigație -->
+      <div class="nav-bar hidden">
+        <h1 class="nav-title"></h1>
+      </div>
+
+      <!-- Vizualizare teleprompter -->
+      <div class="teleprompter-view hidden">
+        <div class="content-container">
+          <!-- Aici lipesti continutul -->
+          <!-- Începutul conținutului -->
+
+          <div class="paragraph">
+            Este anul 30 al erei noastre. Iisus, fiul unui tâmplar din Nazaret
+            cutreieră cetățile Israelului. În urma Sa, mulțimi de oameni Îl
+            ascultă, uimiți de învățăturile Sale profunde și de minunile pe care
+            le săvârșește. Nimeni nu vorbise vreodată ca El. Nimeni nu vindecase
+            bolnavi și nu înviase morți doar prin cuvânt. Mulți se întrebau:
+          </div>
+
+          <div class="blockquote">
+            <div class="blockquote-text">Cine este, oare, Acesta?</div>
+            <span class="blockquote-author">Marcu 4:41</span>
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-12/iisus-predicand.jpg"
+              alt="Iisus predicând mulțimilor"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Iisus predicând mulțimilor în Galileea
+            </div>
+          </div>
+
+          <div class="paragraph">
+            În jurul Său, Iisus a adunat doisprezece ucenici simpli – pescari,
+            vameși, oameni obișnuiți. Le-a spus:
+          </div>
+
+          <div class="blockquote">
+            <div class="blockquote-text">
+              Veniți după Mine și vă voi face pescari de oameni.
+            </div>
+            <span class="blockquote-author">Matei 4:19</span>
+          </div>
+
+          <div class="paragraph">
+            Aceștia au lăsat totul și L-au urmat, devenind martori ai minunilor,
+            ai morții și ai Învierii Sale. Ei vor fi primii Apostoli ai
+            creștinismului, cei care vor duce vestea cea bună (Evanghelia) până
+            la marginile pământului.
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-12/apostolii.jpg"
+              alt="Cei doisprezece Apostoli"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Cei doisprezece Apostoli, primii misionari ai creștinismului
+            </div>
+          </div>
+
+          <h2 class="subtitle">Nașterea Bisericii</h2>
+
+          <div class="paragraph">
+            După Învierea Sa din morți și Înălțarea la cer, Iisus le-a promis
+            ucenicilor Săi că le va trimite un Mângâietor, pe Duhul Sfânt.
+            Această promisiune s-a împlinit în ziua Cincizecimii, când Duhul
+            Sfânt S-a pogorât asupra Apostolilor în chip de limbi de foc.
+            Dintr-odată, ei au început să vorbească în limbi diferite, putând
+            astfel să propovăduiască Evanghelia tuturor popoarelor.
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-12/cincizecime.jpg"
+              alt="Pogorârea Duhului Sfânt"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Pogorârea Duhului Sfânt la Cincizecime - nașterea Bisericii
+            </div>
+          </div>
+
+          <div class="paragraph">
+            În acea zi, după predica înflăcărată a Sfântului Apostol Petru, trei
+            mii de oameni s-au botezat, dând naștere primei comunități creștine.
+            Această zi este considerată ziua de naștere a Bisericii creștine.
+            Astfel a luat naștere cea mai răspândită religie din lume, care avea
+            să transforme istoria omenirii în următoarele două milenii.
+          </div>
+
+          <div class="paragraph">
+            Primii creștini se adunau în case particulare pentru a se ruga,
+            pentru a asculta învățăturile Apostolilor și pentru a frânge pâinea
+            (Sfânta Euharistie). Ei trăiau în comuniune deplină, împărțind toate
+            bunurile și având:
+          </div>
+
+          <div class="blockquote">
+            <div class="blockquote-text">Un suflet și o inimă.</div>
+            <span class="blockquote-author">Fapte 4:32</span>
+          </div>
+
+          <h2 class="subtitle">Răspândirea creștinismului</h2>
+
+          <div class="paragraph">Urmând porunca Mântuitorului:</div>
+
+          <div class="blockquote">
+            <div class="blockquote-text">
+              Mergând, învățați toate neamurile, botezându-le în numele Tatălui
+              și al Fiului și al Sfântului Duh.
+            </div>
+            <span class="blockquote-author">Matei 28:19</span>
+          </div>
+
+          <div class="paragraph">
+            Apostolii au început să propovăduiască Evanghelia în diferite părți
+            ale lumii. Sfântul Pavel, deși nu a fost dintre cei doisprezece, a
+            devenit "Apostolul neamurilor", întreprinzând mai multe călătorii
+            misionare și întemeiind numeroase comunități creștine în Asia Mică,
+            Grecia și chiar până în Roma.
+          </div>
+
+          <div class="paragraph">
+            În ciuda persecuțiilor severe din partea autorităților romane,
+            creștinismul s-a răspândit cu o viteză uimitoare. Tertulian, un mare
+            apărător al credinței creștine din secolul al II-lea, afirma că:
+          </div>
+
+          <div class="blockquote">
+            <div class="blockquote-text">
+              Sângele martirilor este sămânța creștinilor.
+            </div>
+            <span class="blockquote-author">Tertulian</span>
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-12/raspandirea-crestinismului.jpg"
+              alt="Primii creștini propovăduind Evanghelia"
+              class="figure-image"
+            />
+          </div>
+
+          <div class="paragraph">
+            Într-adevăr, cu cât erau uciși mai mulți creștini, cu atât mai mult
+            creștea numărul credincioșilor, uimiți de curajul și credința
+            martirilor.
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-12/nero-persecution.jpg"
+              alt="Martirii creștini în arenele romane"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Martirii creștini în arenele romane, mărturisind credința în
+              Hristos
+            </div>
+          </div>
+
+          <h2 class="subtitle">Recunoașterea oficială</h2>
+
+          <div class="paragraph">
+            Punctul de cotitură în istoria creștinismului a venit în anul 313
+            d.Hr., când împăratul Constantin cel Mare a emis Edictul de la
+            Milano, prin care creștinismul devenea o religie permisă în Imperiul
+            Roman. Acest act a pus capăt persecuțiilor și a deschis calea spre
+            răspândirea largă a creștinismului în întreaga lume romană.
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-12/constantin-milan.jpg"
+              alt="Constantin cel Mare și Edictul de la Milano"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Constantin cel Mare semnând Edictul de la Milano (313 d.Hr.)
+            </div>
+          </div>
+
+          <div class="paragraph">
+            Sub patronajul imperial, creștinismul a cunoscut o dezvoltare
+            rapidă. S-au construit primele biserici publice, s-au organizat
+            primele Sinoade Ecumenice, iar numeroși misionari creștini au pornit
+            să răspândească credința în toate colțurile lumii cunoscute.
+          </div>
+
+          <h2 class="subtitle">Învățătura de credință</h2>
+
+          <div class="paragraph">
+            Creștinismul se bazează pe revelația divină, care este cuprinsă în:
+          </div>
+
+          <ul class="content-list">
+            <li>
+              Sfânta Scriptură (Biblia) - care include Vechiul Testament, comun
+              cu iudaismul, și Noul Testament, care conține scrierile
+              Apostolilor despre viața și învățăturile lui Iisus Hristos
+            </li>
+            <li>
+              Sfânta Tradiție - totalitatea adevărurilor revelate care nu se
+              cuprind în Sfânta Scriptură, fiind predate oral de către
+              Mântuitorul și Sfinții Apostoli
+            </li>
+          </ul>
+
+          <div class="paragraph">
+            Dogmele fundamentale ale creștinismului sunt cuprinse în Simbolul
+            Credinței (Crezul), formulat la primele două Sinoade Ecumenice
+            (Niceea - 325 și Constantinopol - 381). Printre cele mai importante
+            învățături se numără:
+          </div>
+
+          <ul class="content-list">
+            <li>
+              Dogma Sfintei Treimi - Dumnezeu este Unul în Ființă și întreit în
+              Persoane: Tatăl, Fiul și Sfântul Duh
+            </li>
+            <li>
+              Iisus Hristos este Fiul lui Dumnezeu întrupat, Dumnezeu desăvârșit
+              și Om desăvârșit
+            </li>
+            <li>
+              Prin întruparea, moartea și Învierea Sa, Hristos a realizat
+              mântuirea omului de sub păcatul strămoșesc
+            </li>
+            <li>
+              Fecioara Maria este Născătoare de Dumnezeu, rămânând fecioară și
+              după naștere
+            </li>
+            <li>
+              Biserica este instituția sfântă, divino-umană, întemeiată de
+              Hristos pentru mântuirea oamenilor
+            </li>
+            <li>Taina Sfântului Botez este "ușa" de intrare în creștinism</li>
+            <li>
+              La sfârșitul veacurilor va avea loc Învierea morților și Judecata
+              de Apoi
+            </li>
+          </ul>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-12/simbolul-credintei.jpg"
+              alt="Simbolul Credinței - Crezul"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Simbolul Credinței (Crezul) - sinteza învățăturii creștine
+            </div>
+          </div>
+
+          <h2 class="subtitle">Sinoade Ecumenice</h2>
+
+          <div class="paragraph">
+            Pe măsură ce creștinismul s-a răspândit, au apărut diverse
+            interpretări ale învățăturii lui Hristos, unele eretice. Pentru a
+            clarifica și formula corect dogmele creștine, s-au organizat șapte
+            Sinoade Ecumenice, care au definit temeiurile credinței creștine
+            ortodoxe:
+          </div>
+
+          <ul class="content-list">
+            <li>
+              Sinodul I Ecumenic de la Niceea (325) - a formulat dogma despre
+              dumnezeirea Fiului și egalitatea Lui cu Tatăl, combătând erezia
+              ariană
+            </li>
+            <li>
+              Sinodul al II-lea Ecumenic de la Constantinopol (381) - a formulat
+              dogma despre dumnezeirea Duhului Sfânt și egalitatea Lui cu Tatăl
+              și cu Fiul
+            </li>
+            <li>
+              Sinodul al III-lea Ecumenic de la Efes (431) - a stabilit că în
+              Hristos sunt două firi, dar o singură Persoană, și a clarificat
+              cinstirea Maicii Domnului ca Născătoare de Dumnezeu
+            </li>
+            <li>
+              Sinodul al IV-lea Ecumenic de la Calcedon (451) - a proclamat că
+              Iisus Hristos este Fiul lui Dumnezeu, Dumnezeu adevărat și Om
+              adevărat
+            </li>
+            <li>
+              Sinoadele al V-lea și al VI-lea Ecumenice de la Constantinopol
+              (553 și 680-681) - au reconfirmat învățătura despre cele două firi
+              și două voințe în Hristos
+            </li>
+            <li>
+              Sinodul al VII-lea Ecumenic de la Niceea (787) - a confirmat
+              credința în Sfintele Icoane, combătând erezia iconoclastă
+            </li>
+          </ul>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-12/sinodul-niceea.jpg"
+              alt="Primul Sinod Ecumenic de la Niceea"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Primul Sinod Ecumenic de la Niceea (325 d.Hr.)
+            </div>
+          </div>
+
+          <h2 class="subtitle">Marea Schismă</h2>
+
+          <div class="paragraph">
+            Din motive doctrinare, politice, culturale și lingvistice, în anul
+            1054 s-a produs o ruptură între Biserica Răsăritului (Ortodoxă) și
+            Biserica Apusului (Catolică). Acest eveniment, cunoscut ca Marea
+            Schismă, a marcat prima mare divizare în sânul creștinismului.
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-12/marea-schisma.jpg"
+              alt="Marea Schismă din 1054"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Reprezentare simbolică a Marii Schisme din 1054
+            </div>
+          </div>
+
+          <div class="paragraph">
+            Diferențele principale între cele două Biserici includeau:
+          </div>
+
+          <ul class="content-list">
+            <li>
+              Adaosul "Filioque" la Simbolul Credinței (catolicii susținând că
+              Duhul Sfânt purcede și de la Fiul, nu doar de la Tatăl)
+            </li>
+            <li>
+              Primatul papal (Biserica Catolică susținea autoritatea supremă a
+              Papei de la Roma)
+            </li>
+            <li>Diferențe în practica liturgică și viața monahală</li>
+          </ul>
+
+          <div class="paragraph">
+            Au existat mai multe încercări de reconciliere între cele două
+            Biserici de-a lungul istoriei, dar unitatea deplină nu a fost
+            restabilită până în prezent.
+          </div>
+
+          <h2 class="subtitle">Reforma Protestantă</h2>
+
+          <div class="paragraph">
+            O a doua mare divizare în sânul creștinismului a avut loc în secolul
+            al XVI-lea, când Martin Luther, un călugăr și profesor de teologie
+            german, a inițiat mișcarea cunoscută ca Reforma Protestantă. În
+            1517, Luther a afișat cele 95 de teze pe ușa Bisericii din
+            Wittenberg, protestând împotriva unor practici ale Bisericii
+            Catolice, precum vânzarea indulgențelor.
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-12/luther-teze.jpg"
+              alt="Martin Luther afișând cele 95 de teze"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Martin Luther afișând cele 95 de teze pe ușa Bisericii din
+              Wittenberg (1517)
+            </div>
+          </div>
+
+          <div class="paragraph">
+            Reforma a fost continuată de personalități precum Ulrich Zwingli,
+            Jean Calvin și Henric al VIII-lea al Angliei. Principalele
+            caracteristici ale protestantismului includeau:
+          </div>
+
+          <ul class="content-list">
+            <li>
+              <span class="blockquote-text">Sola Scriptura</span>
+              (doar Scriptura) - respingerea Tradiției și a autorității
+              bisericești
+            </li>
+            <li>
+              <span class="blockquote-text">Sola Fide</span>
+              (doar credința) - mântuirea doar prin credință, nu prin fapte
+            </li>
+            <li>Respingerea autorității papale</li>
+            <li>Simplificarea cultului și respingerea majorității Tainelor</li>
+          </ul>
+
+          <div class="paragraph">
+            În urma Reformei, din Biserica Catolică s-au desprins Bisericile
+            protestante: luterană, calvină (reformată), anglicană și unitariană.
+            Mai târziu, din acestea au derivat Bisericile neo-protestante:
+            baptistă, adventistă, penticostală, evanghelică și altele.
+          </div>
+
+          <h2 class="subtitle">Contrareforma și Uniația</h2>
+
+          <div class="paragraph">
+            Ca răspuns la Reforma Protestantă, Biserica Romano-Catolică a
+            inițiat o mișcare numită Contrareformă, care urmărea menținerea
+            unității în cadrul Bisericii. Printre măsurile adoptate se numărau:
+          </div>
+
+          <ul class="content-list">
+            <li>Intensificarea propagandei religioase</li>
+            <li>Înființarea de școli și universități religioase</li>
+            <li>Crearea Ordinului Iezuiților</li>
+            <li>Interzicerea anumitor cărți considerate eretice</li>
+            <li>Amplificarea activităților caritabile</li>
+          </ul>
+
+          <div class="paragraph">
+            În acest context, Biserica Catolică a încercat să atragă și
+            comunități ortodoxe, în special în Europa de Est. Astfel au apărut
+            Bisericile Greco-Catolice sau Unite cu Roma, care păstrau ritul
+            oriental, dar recunoșteau autoritatea Papei.
+          </div>
+
+          <h2 class="subtitle">Creștinismul în lumea contemporană</h2>
+
+          <div class="paragraph">
+            În zilele noastre, creștinismul rămâne cea mai răspândită religie
+            din lume, având aproximativ 2,4 miliarde de adepți. Cu toate
+            acestea, este divizat în numeroase confesiuni și denominațiuni.
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-12/harta-crestinism.jpg"
+              alt="Răspândirea creștinismului în lumea contemporană"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Răspândirea creștinismului în lumea contemporană
+            </div>
+          </div>
+
+          <div class="paragraph">
+            În dorința de refacere a unității Bisericii primare, în secolul XX
+            s-a constituit Consiliul Ecumenic al Bisericilor, un organism care
+            promovează dialogul și cooperarea între diferitele confesiuni
+            creștine.
+          </div>
+
+          <div class="paragraph">
+            Creștinismul continuă să joace un rol important în cultura, arta,
+            etica și viața socială a multor societăți. Valorile creștine precum
+            iubirea aproapelui, milostenia, iertarea și respectul pentru
+            demnitatea umană au influențat profund civilizația occidentală și nu
+            numai.
+          </div>
+
+          <div class="paragraph">
+            Mesajul central al creștinismului - vestea bună a mântuirii prin
+            Iisus Hristos - continuă să răsune în întreaga lume, oferind
+            speranță și sens vieții a miliarde de oameni.
+          </div>
+
+          <div class="blockquote">
+            <div class="blockquote-text">
+              Eu sunt Calea, Adevărul și Viața. Nimeni nu vine la Tatăl decât
+              prin Mine.
+            </div>
+            <span class="blockquote-author">Ioan 14:6</span>
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-12/cruce-rasarit.jpg"
+              alt="Crucea - simbolul creștinismului"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Crucea - simbolul universal al creștinismului și al jertfei
+              mântuitoare a lui Hristos
+            </div>
+          </div>
+          <!-- pana aici lipesti continutul -->
+        </div>
+      </div>
+      <!-- Selector student -->
+      <div class="student-selector hidden">
+        <div
+          class="student-card"
+          data-tooltip="Apasă tasta 'e' sau ➔ pentru a alege următorul elev"
+        >
+          <div class="student-name"></div>
+        </div>
+      </div>
+
+      <!-- Controale laterale -->
+      <div class="side-controls left hidden">
+        <button
+          class="control-btn"
+          id="speed-down"
+          data-tooltip="Micșorează viteza de redare"
+        >
+          <i data-lucide="rewind"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="play-pause"
+          data-tooltip="Pornește/Pauză"
+        >
+          <i data-lucide="play"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="speed-up"
+          data-tooltip="Mărește viteza de redare"
+        >
+          <i data-lucide="fast-forward"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="sound-toggle"
+          data-tooltip="Pornește sunetul (M)"
+        >
+          <i data-lucide="volume-x"></i>
+        </button>
+      </div>
+
+      <div class="side-controls right">
+        <button class="control-btn" id="zoom-in" data-tooltip="Mărește textul">
+          <i data-lucide="zoom-in"></i>
+        </button>
+        <button class="theme-toggle" data-tooltip="Schimbă tema">
+          <i data-lucide="moon"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="zoom-out"
+          data-tooltip="Micșorează textul"
+        >
+          <i data-lucide="zoom-out"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="fullscreen-toggle"
+          data-tooltip="Comută ecran complet"
+        >
+          <i data-lucide="maximize"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="lectia-12.js"></script>
+  </body>
+</html>
