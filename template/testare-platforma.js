@@ -1,5 +1,3 @@
-// pagina /testare-platforma.js
-
 // Selectăm elementele DOM
 const welcomeScreen = document.querySelector(".welcome-screen");
 const startBtn = document.querySelector(".start-btn");
@@ -26,7 +24,7 @@ const fullscreenToggle = document.getElementById("fullscreen-toggle");
 // Configurrări inițiale principale pentru lecție
 
 backgroundMusic.volume = 0.5; // Setăm volumul inițial la 50%
-const titleText = "Testare platforma"; // Textul titlului
+const titleText = "Creștinismul - apariție și dezvoltare"; // Textul titlului
 const TITLE_ANIMATION_DURATION = 3500; // durata animației typing in milisecunde
 const POST_ANIMATION_DELAY = 3500; // delay după animație în milisecunde
 
@@ -685,6 +683,76 @@ backgroundMusic.addEventListener("ended", function () {
   if (isPlaying) {
     backgroundMusic.currentTime = 0;
     backgroundMusic.play();
+  }
+});
+
+// Inițializare video
+function handleVideos() {
+  const videoPlaceholders = document.querySelectorAll(".video-placeholder");
+
+  videoPlaceholders.forEach((placeholder) => {
+    const videoType = placeholder.getAttribute("data-type");
+    const videoSrc = placeholder.getAttribute("data-src");
+
+    if (videoType === "youtube") {
+      // Crează video YouTube
+      const container = document.createElement("div");
+      container.className = "video-container landscape";
+
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://www.youtube.com/embed/${videoSrc}`;
+      iframe.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      iframe.allowFullscreen = true;
+
+      container.appendChild(iframe);
+      placeholder.parentNode.replaceChild(container, placeholder);
+    } else if (videoType === "local") {
+      // Crează video local
+      const container = document.createElement("div");
+      container.className = "video-container landscape"; // Default landscape
+
+      const video = document.createElement("video");
+      video.src = videoSrc;
+      video.controls = true;
+      video.preload = "metadata";
+
+      // Verifică orientarea și ajustează clasa
+      video.addEventListener("loadedmetadata", function () {
+        if (video.videoHeight > video.videoWidth) {
+          container.className = "video-container portrait";
+        }
+      });
+
+      // Pauză teleprompter când video-ul pornește
+      video.addEventListener("play", function () {
+        if (typeof isPlaying !== "undefined" && isPlaying) {
+          togglePlayPause();
+        }
+      });
+
+      container.appendChild(video);
+      placeholder.parentNode.replaceChild(container, placeholder);
+    }
+  });
+}
+
+// Apelează funcția după ce teleprompter-ul pornește
+document.addEventListener("DOMContentLoaded", function () {
+  // Dacă startTeleprompter a fost deja executat
+  if (
+    typeof teleprompterView !== "undefined" &&
+    !teleprompterView.classList.contains("hidden")
+  ) {
+    handleVideos();
+  }
+
+  // Adaugă un listener pentru butonul de start
+  if (typeof startBtn !== "undefined") {
+    startBtn.addEventListener("click", function () {
+      // După o mică întârziere pentru a se asigura că teleprompter-ul este pornit
+      setTimeout(handleVideos, 7000);
+    });
   }
 });
 

@@ -1,0 +1,360 @@
+/* Stiluri pentru butonul de quiz */
+.quiz-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.quiz-button {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  color: white;
+  font-size: calc(18px * var(--zoom-level));
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.quiz-button:active {
+  transform: scale(0.98);
+}
+
+.quiz-button-text {
+  position: relative;
+  z-index: 2;
+}
+
+.quiz-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.7s;
+}
+
+.quiz-button:hover::before {
+  left: 100%;
+}
+
+/* Modal */
+.quiz-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  backdrop-filter: blur(3px);
+}
+
+.quiz-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.quiz-modal {
+  width: 80%;
+  max-width: 1000px;
+  max-height: 90vh;
+  background-color: var(--bg-color);
+  border-radius: 12px;
+  padding: 0;
+  position: relative;
+  overflow: visible; /* Schimbat din overflow: hidden pentru a permite vizibilitatea bordurii */
+  transform: scale(0.9);
+  transition: transform 0.3s;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.quiz-modal.active {
+  transform: scale(1);
+}
+
+/* Soluție nouă pentru bordură */
+.quiz-modal::before {
+  content: "";
+  position: absolute;
+  inset: -3px; /* Extinde bordura în exterior */
+  border-radius: 14px; /* Ajustează pentru a se potrivi cu marginea exterioară */
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #f43f5e);
+  z-index: -1;
+}
+
+.quiz-modal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: var(--bg-color);
+  z-index: -1;
+}
+
+.quiz-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+  z-index: 10;
+}
+
+.quiz-modal-close:hover {
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+.quiz-modal-body {
+  padding: 32px 20px 20px; /* Mărim padding-ul de sus pentru a compensa eliminarea header-ului */
+  overflow-y: auto;
+  flex: 1;
+  max-height: calc(90vh - 100px);
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE și Edge */
+  position: relative;
+  z-index: 1;
+}
+
+/* Ascunde scrollbar pentru Chrome, Safari și Opera */
+.quiz-modal-body::-webkit-scrollbar {
+  display: none;
+}
+
+.quiz-question {
+  font-size: calc(var(--base-font-size) * var(--zoom-level) * 1.1);
+  margin-bottom: 20px;
+  color: var(--text-color);
+  line-height: 1.6;
+  font-weight: 600;
+  padding-right: 30px; /* Spațiu pentru butonul de închidere */
+}
+
+.quiz-image-container {
+  margin: 20px 0;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.quiz-image {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+}
+
+.quiz-video-container {
+  margin: 20px 0;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.quiz-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.quiz-options {
+  display: none;
+  margin-top: 20px;
+  padding-bottom: 20px; /* Spațiu suplimentar la sfârșit */
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  background-color: rgba(128, 128, 128, 0.08);
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.quiz-option:hover {
+  background-color: rgba(128, 128, 128, 0.15);
+  transform: translateX(5px);
+}
+
+.quiz-option.selected {
+  background-color: rgba(59, 130, 246, 0.2);
+  border-left: 3px solid #3b82f6;
+}
+
+.quiz-option.correct {
+  background-color: rgba(16, 185, 129, 0.2);
+  border-left: 3px solid #10b981;
+}
+
+.quiz-option.incorrect {
+  background-color: rgba(239, 68, 68, 0.2);
+  border-left: 3px solid #ef4444;
+}
+
+.quiz-option-text {
+  margin-left: 10px;
+  font-size: calc(var(--base-font-size) * var(--zoom-level) * 0.7);
+  color: var(--text-color);
+}
+
+.quiz-result-message {
+  display: none;
+  margin-top: 5px;
+  margin-bottom: 25px; /* Adăugat margin la baza mesajului */
+  padding: 15px;
+  border-radius: 8px;
+  font-size: calc(var(--base-font-size) * var(--zoom-level) * 0.8);
+  line-height: 1.6;
+  text-align: center;
+  font-weight: 600;
+  position: relative; /* Poziționare relativă */
+  z-index: 2; /* Z-index mai mare decât footer-ul */
+}
+
+.quiz-result-message.correct {
+  background-color: rgba(16, 185, 129, 0.2);
+  border-left: 3px solid #10b981;
+  color: #10b981;
+}
+
+.quiz-result-message.incorrect {
+  background-color: rgba(239, 68, 68, 0.2);
+  border-left: 3px solid #ef4444;
+  color: #ef4444;
+}
+
+.quiz-modal-footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px 20px;
+  border-top: 1px solid var(--accent-color);
+  position: relative;
+  background-color: var(--bg-color);
+  z-index: 1;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 0 0 12px 12px;
+}
+
+.quiz-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: calc(16px * var(--zoom-level));
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  min-width: 200px;
+  text-align: center;
+}
+
+.quiz-btn:hover {
+  transform: translateY(-2px);
+}
+
+.quiz-btn-options {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.quiz-btn-options:hover {
+  background-color: #2563eb;
+}
+
+.quiz-btn-answer {
+  background-color: #10b981;
+  color: white;
+}
+
+.quiz-btn-answer:hover {
+  background-color: #059669;
+}
+
+.quiz-btn-answer:disabled {
+  background-color: #6b7280;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .quiz-modal {
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .quiz-modal-body {
+    max-height: calc(90vh - 100px);
+  }
+
+  .quiz-btn {
+    padding: 10px 15px;
+    font-size: calc(14px * var(--zoom-level));
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .quiz-button {
+    padding: 10px 18px;
+    font-size: calc(16px * var(--zoom-level));
+  }
+
+  .quiz-question {
+    font-size: calc(var(--base-font-size) * var(--zoom-level) * 0.7);
+    padding-right: 40px;
+  }
+
+  .quiz-option-text {
+    font-size: calc(var(--base-font-size) * var(--zoom-level) * 0.6);
+  }
+
+  .quiz-modal-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .quiz-btn {
+    width: 100%;
+  }
+}

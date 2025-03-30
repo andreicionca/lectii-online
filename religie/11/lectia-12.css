@@ -339,14 +339,13 @@ body {
   text-align: justify;
   margin-bottom: 30px;
 }
-
 .figure-image {
   width: 100%;
   max-width: 1200px;
   height: auto;
-  margin: 20px 0;
+  margin: 20px 0 0 0; /* Margine doar sus */
   display: block;
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0; /* Doar colțurile de sus rotunjite */
   position: relative;
 }
 
@@ -354,22 +353,79 @@ body {
   position: relative;
   width: 100%;
   margin: 40px 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .image-caption {
-  position: absolute;
-  bottom: 0;
+  position: relative; /* Schimbat din absolute */
+  bottom: auto;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   color: white;
-  padding: 2px 20px;
+  padding: 10px 20px;
   text-align: center;
   font-size: calc(17px * var(--zoom-level));
   line-height: 1.4;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   backdrop-filter: blur(3px);
+}
+/* Stiluri pentru video */
+.video-container {
+  width: 100%;
+  margin: 40px 0;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Video landscape - limitată la 85% din lățimea teleprompterului */
+.video-container.landscape {
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  aspect-ratio: 16/9;
+}
+
+/* Video portret - limitată la înălțimea viewport-ului */
+.video-container.portrait {
+  max-height: 80vh;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  aspect-ratio: 9/16;
+}
+
+/* Elementul video */
+.video-container video,
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #000;
+}
+
+/* Placeholder înainte de încărcare */
+.video-placeholder {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  border-radius: 8px;
+  margin: 40px 0;
+  position: relative;
+}
+
+.video-placeholder::after {
+  content: "Loading video...";
+  color: var(--text-color);
+  font-size: 18px;
+  opacity: 0.8;
 }
 
 /* Theme toggle */
@@ -797,9 +853,17 @@ body {
   }
 
   .image-caption {
-    padding: 10px 15px;
+    padding: 8px 15px;
     font-size: calc(14px * var(--zoom-level));
     line-height: 1.35;
+  }
+
+  .video-container.landscape {
+    max-width: 100%;
+  }
+
+  .video-container.portrait {
+    max-height: 60vh;
   }
 
   /* Navigație */
@@ -921,9 +985,9 @@ body {
     margin-bottom: 3px;
   }
   .image-caption {
-    padding: 6px 8px;
+    padding: 4px 12px;
     font-size: calc(10px * var(--zoom-level));
-    line-height: 1.3;
+    line-height: 1.35;
   }
   /* Controale - mai mici pentru telefoane */
   .side-controls .control-btn,

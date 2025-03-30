@@ -150,12 +150,6 @@
         "name": "Testare platforma",
         "title": "Testare platforma",
         "path": "/template/testare-platforma.html"
-      },
-      {
-        "id": "template-1",
-        "name": "Template 1",
-        "title": "Template 1",
-        "path": "/template/template-1.html"
       }
     ]
   },
