@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ro" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecția 13</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"
+    />
+    <link rel="stylesheet" href="lectia-13.css" />
+    <link rel="stylesheet" href="quiz-modal.css" />
+
+    <link
+      rel="icon"
+      href="../../assets/favicon_lessons.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <audio id="backgroundMusic" loop>
+      <source
+        src="../../assets/music/Traditional Arabic Music.mp3"
+        type="audio/mp3"
+      />
+    </audio>
+    <div class="app-container">
+      <!-- Ecran de start -->
+      <div id="error-container" class="hidden"></div>
+      <div class="welcome-screen">
+        <button class="start-btn">Începe lecția</button>
+      </div>
+
+      <!-- Ecran cu titlu mare -->
+      <div class="title-screen hidden">
+        <div class="title-wrapper">
+          <h1 class="title"></h1>
+        </div>
+      </div>
+
+      <!-- Bara de navigație -->
+      <div class="nav-bar hidden">
+        <h1 class="nav-title"></h1>
+      </div>
+
+      <!-- Vizualizare teleprompter -->
+      <div class="teleprompter-view hidden">
+        <div class="content-container">
+          <!-- Începutul conținutului -->
+
+          <div class="paragraph">
+            Este anul 570 după Hristos, în Peninsula Arabică, într-un ținut
+            arid, dominat de deșert și triburi nomade. În orașul Mecca, un
+            centru comercial important și loc de pelerinaj pentru numeroase
+            triburi păgâne, se naște un copil pe nume Muhammad. Puțini și-ar fi
+            imaginat atunci că acest copil va schimba pentru totdeauna cursul
+            istoriei, devenind fondatorul uneia dintre cele mai importante
+            religii ale lumii.
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-13/mecca-kaaba.jpg"
+              alt="Mecca și Kaaba"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Orașul sfânt Mecca cu sanctuarul Kaaba în centru
+            </div>
+          </div>
+
+          <div class="paragraph">
+            Muhammad s-a născut într-o societate dominată de politeism și
+            idolatrie. Triburile arabe venerau diverse zeități, reprezentate
+            prin idoli care erau păstrați în sanctuarul Kaaba din Mecca. Orfan
+            de timpuriu, Muhammad a crescut sub protecția unchiului său și a
+            devenit un comerciant respectat, cunoscut pentru cinstea și
+            înțelepciunea sa. Se căsătorește cu Khadija, o văduvă bogată pentru
+            care lucra, și împreună au mai mulți copii.
+          </div>
+
+          <h2 class="subtitle">Primele revelații</h2>
+
+          <div class="paragraph">
+            La vârsta de 40 de ani, în anul 610, în timp ce medita în peștera
+            Hira din apropiere de Mecca, Muhammad are o experiență care îi va
+            schimba viața. Îngerul Gabriel (Jibril) i se arată și îi poruncește:
+          </div>
+
+          <div class="blockquote">
+            <div class="blockquote-text">
+              Citește! În numele Domnului tău care a creat, care l-a creat pe om
+              din sânge închegat. Citește! Căci Domnul tău este Cel mai Generos.
+            </div>
+            <span class="blockquote-author">Coran, Sura 96:1-3</span>
+          </div>
+
+          <div class="paragraph">
+            Acesta a fost începutul revelațiilor divine care, adunate, vor forma
+            Coranul, cartea sfântă a musulmanilor. Inițial, Muhammad a fost
+            tulburat de această experiență, dar Khadija l-a încurajat și a
+            devenit primul său adept. Treptat, tot mai mulți oameni i s-au
+            alăturat, atrași de mesajul său de monoteism strict și egalitate
+            socială.
+          </div>
+
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="În ce an a primit Muhammad prima revelație divină?"
+              data-option1="570 d.Hr."
+              data-option2="610 d.Hr."
+              data-option3="622 d.Hr."
+              data-correct="2"
+            >
+              <span class="quiz-button-text"
+                >Răspunde la o întrebare. Apasă aici!</span
+              >
+            </button>
+          </div>
+
+          <div class="paragraph">
+            În Mecca, mesajul lui Muhammad a fost întâmpinat cu ostilitate de
+            către conducătorii tribali, care vedeau în noua credință o
+            amenințare la adresa vechilor tradiții și a intereselor comerciale
+            legate de pelerinajele la Kaaba. Musulmanii au fost persecutați și
+            unii au fost nevoiți să se refugieze în Abisinia (Etiopia de
+            astăzi).
+          </div>
+
+          <h2 class="subtitle">Hegira și consolidarea comunității</h2>
+
+          <div class="paragraph">
+            În anul 622, după ce persecuțiile s-au intensificat, Muhammad și
+            adepții săi se mută în orașul Yathrib (redenumit mai târziu Medina),
+            la invitația locuitorilor de acolo. Această migrație, numită Hegira
+            (Hijra), marchează începutul calendarului islamic.
+          </div>
+
+          <div class="paragraph">
+            La Medina, Muhammad devine atât lider spiritual, cât și politic,
+            organizând prima comunitate islamică (Umma). Aici, el stabilește
+            bazele noii societăți islamice, fundamentată pe:
+          </div>
+
+          <ul class="content-list">
+            <li>
+              Credința în Allah, unicul Dumnezeu, și în Muhammad ca profetul Său
+            </li>
+            <li>Rugăciunea zilnică de cinci ori (Salat)</li>
+            <li>Dania pentru săraci (Zakat)</li>
+            <li>Postul din luna Ramadan (Sawm)</li>
+            <li>Pelerinajul la Mecca (Hajj), dacă condițiile permit</li>
+          </ul>
+
+          <div class="paragraph">
+            Acești cinci stâlpi ai Islamului au devenit fundamentul practicii
+            religioase musulmane și sunt urmați și astăzi de credincioși din
+            întreaga lume.
+          </div>
+
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="Care eveniment marchează începutul calendarului islamic?"
+              data-option1="Nașterea lui Muhammad"
+              data-option2="Prima revelație din peștera Hira"
+              data-option3="Migrația (Hegira) la Medina"
+              data-correct="3"
+            >
+              <span class="quiz-button-text"
+                >Răspunde la o întrebare. Apasă aici!</span
+              >
+            </button>
+          </div>
+
+          <div class="paragraph">
+            După opt ani de conflicte și tratative cu locuitorii din Mecca,
+            Muhammad revine triumfător în orașul său natal în anul 630. El intră
+            în sanctuarul Kaaba, distruge idolii și îl dedică adorării lui
+            Allah. Până la moartea sa în anul 632, majoritatea triburilor din
+            Peninsula Arabică acceptaseră Islamul.
+          </div>
+
+          <h2 class="subtitle">Expansiunea Islamului</h2>
+
+          <div class="paragraph">
+            După moartea lui Muhammad, conducerea comunității a fost preluată de
+            califi („succesori"). Sub primii patru califi, considerați
+            „bine-călăuziți" (632-661), Islamul s-a răspândit dincolo de
+            Peninsula Arabică, cucerind vaste teritorii din Orientul Mijlociu,
+            Africa de Nord și Persia.
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-13/islamic-expansion.jpg"
+              alt="Expansiunea Islamului"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Expansiunea Imperiului Islamic în primele secole după apariția sa
+            </div>
+          </div>
+
+          <div class="paragraph">
+            Această expansiune rapidă a fost posibilă datorită mai multor
+            factori:
+          </div>
+
+          <ul class="content-list">
+            <li>Unitații triburilor arabe sub steagul Islamului</li>
+            <li>Slăbiciunii imperiilor vecine (Bizantin și Persan)</li>
+            <li>
+              Toleranței religioase oferite „Popoarelor Cărții" (evrei și
+              creștini)
+            </li>
+            <li>
+              Sistemului juridic și administrativ eficient dezvoltat de
+              musulmani
+            </li>
+          </ul>
+
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="Cine a condus comunitatea islamică după moartea lui Muhammad?"
+              data-option1="Imamii"
+              data-option2="Califii"
+              data-option3="Sultanii"
+              data-correct="2"
+            >
+              <span class="quiz-button-text"
+                >Răspunde la o întrebare. Apasă aici!</span
+              >
+            </button>
+          </div>
+
+          <h2 class="subtitle">Epoca de Aur a Islamului</h2>
+
+          <div class="paragraph">
+            Sub dinastiile Omeyadă (661-750) și Abbasidă (750-1258), lumea
+            islamică a cunoscut o perioadă de înflorire culturală, științifică
+            și artistică, cunoscută drept „Epoca de Aur". În timp ce Europa
+            traversa Evul Mediu timpuriu, centrele culturale musulmane precum
+            Bagdad, Damasc, Cairo și Cordoba erau faruri ale civilizației, unde
+            învățați din diverse religii și culturi colaborau.
+          </div>
+
+          <div class="paragraph">
+            Contribuțiile islamice la dezvoltarea civilizației mondiale au fost
+            semnificative:
+          </div>
+
+          <ul class="content-list">
+            <li>
+              În matematică: dezvoltarea algebrei, trigonometriei, introducerea
+              cifrelor arabe în Europa
+            </li>
+            <li>
+              În astronomie: perfecționarea astrolabului, crearea de
+              observatoare, calcularea precisă a mișcărilor planetare
+            </li>
+            <li>
+              În medicină: descoperiri în anatomie, chirurgie, farmacologie,
+              crearea primelor spitale publice
+            </li>
+            <li>
+              În chimie: dezvoltarea proceselor de distilare, sublimație,
+              cristalizare
+            </li>
+            <li>
+              În filosofie: traducerea și comentarea operelor grecești,
+              dezvoltarea propriilor sisteme filosofice
+            </li>
+          </ul>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-13/islamic-scholars.jpg"
+              alt="Învățați islamici"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Învățați islamici studiind și transmițând cunoștințe în timpul
+              Epocii de Aur
+            </div>
+          </div>
+
+          <div class="paragraph">
+            Marele învățat și filosof Averroes (Ibn Rushd) scria:
+          </div>
+
+          <div class="blockquote">
+            <div class="blockquote-text">
+              Ignoranța duce la frică, frica duce la ură, iar ura duce la
+              violență. Iată ecuația.
+            </div>
+            <span class="blockquote-author">Averroes (Ibn Rushd)</span>
+          </div>
+
+          <div class="paragraph">
+            Biblioteca din Cordoba adăpostea peste 400.000 de volume, într-o
+            vreme când cele mai mari biblioteci din Europa aveau doar câteva
+            sute de manuscrise. Califii și sultanii erau adesea mari patroni ai
+            artelor și științelor, considerând că dezvoltarea cunoașterii este o
+            obligație religioasă.
+          </div>
+
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="Care dintre următoarele contribuții NU aparține civilizației islamice?"
+              data-option1="Dezvoltarea algebrei"
+              data-option2="Introducerea tiparului"
+              data-option3="Perfecționarea astrolabului"
+              data-correct="2"
+            >
+              <span class="quiz-button-text"
+                >Răspunde la o întrebare. Apasă aici!</span
+              >
+            </button>
+          </div>
+
+          <h2 class="subtitle">Diviziuni în Islam</h2>
+
+          <div class="paragraph">
+            După moartea Profetului Muhammad, au apărut divergențe privind
+            succesiunea la conducerea comunității islamice. Acest lucru a dus la
+            apariția celor două ramuri principale ale Islamului:
+          </div>
+
+          <ul class="content-list">
+            <li>
+              Sunniții - care consideră că succesiunea trebuie să se bazeze pe
+              consens și merit
+            </li>
+            <li>
+              Șiiții - care cred că liderii trebuie să fie descendenți ai
+              Profetului prin ginerele său, Ali
+            </li>
+          </ul>
+
+          <div class="paragraph">
+            În timp, s-au conturat și alte ramuri, precum sufismul (orientarea
+            mistică a Islamului) și numeroase școli juridice. În ciuda acestor
+            diviziuni, musulmanii din întreaga lume împărtășesc fundamentele
+            credinței:
+          </div>
+
+          <ul class="content-list">
+            <li>Unicitatea lui Allah</li>
+            <li>Autoritatea Coranului ca revelație divină</li>
+            <li>Recunoașterea lui Muhammad ca ultimul profet</li>
+            <li>Respectarea celor cinci stâlpi ai Islamului</li>
+          </ul>
+
+          <h2 class="subtitle">Islamul în epoca modernă</h2>
+
+          <div class="paragraph">
+            După secole de dominație politică și culturală, lumea islamică a
+            cunoscut o perioadă de declin în fața puterilor europene.
+            Colonialismul și modernitatea au adus provocări majore, la care
+            diversele societăți musulmane au răspuns în moduri diferite.
+          </div>
+
+          <div class="paragraph">
+            Astăzi, Islamul este a doua religie ca mărime din lume, cu peste 1,8
+            miliarde de adepți. Comunitățile musulmane sunt prezente pe toate
+            continentele, contribuind la dialogul intercultural și la
+            diversitatea spirituală a umanității.
+          </div>
+
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="Care sunt cele două ramuri principale ale Islamului?"
+              data-option1="Sunniți și Șiiți"
+              data-option2="Sufiți și Wahhabiți"
+              data-option3="Malikiți și Hanbaliți"
+              data-correct="1"
+            >
+              <span class="quiz-button-text"
+                >Răspunde la o întrebare. Apasă aici!</span
+              >
+            </button>
+          </div>
+
+          <div class="paragraph">
+            Mesajul central al Islamului - supunerea față de voia lui Dumnezeu
+            și căutarea păcii - continuă să inspire milioane de oameni în
+            eforturile lor de a trăi o viață virtuoasă și de a construi
+            societăți drepte.
+          </div>
+
+          <div class="blockquote">
+            <div class="blockquote-text">
+              Cel care ucide un suflet nevinovat e ca și cum ar fi ucis întreaga
+              omenire, iar cel care salvează o viață e ca și cum ar fi salvat
+              întreaga omenire.
+            </div>
+            <span class="blockquote-author">Coran, Sura 5:32</span>
+          </div>
+
+          <div class="paragraph">
+            Prin bogăția sa spirituală, culturală și intelectuală, Islamul
+            rămâne una dintre forțele care au modelat și continuă să modeleze
+            istoria umanității.
+          </div>
+
+          <!-- sfârșitul conținutului -->
+        </div>
+      </div>
+      <!-- Selector student -->
+      <div class="student-selector hidden">
+        <div
+          class="student-card"
+          data-tooltip="Apasă tasta 'e' sau ➔ pentru a alege următorul elev"
+        >
+          <div class="student-name"></div>
+        </div>
+      </div>
+
+      <!-- Controale laterale -->
+      <div class="side-controls left hidden">
+        <button
+          class="control-btn"
+          id="speed-down"
+          data-tooltip="Micșorează viteza de redare"
+        >
+          <i data-lucide="rewind"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="play-pause"
+          data-tooltip="Pornește/Pauză"
+        >
+          <i data-lucide="play"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="speed-up"
+          data-tooltip="Mărește viteza de redare"
+        >
+          <i data-lucide="fast-forward"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="sound-toggle"
+          data-tooltip="Pornește sunetul (M)"
+        >
+          <i data-lucide="volume-x"></i>
+        </button>
+      </div>
+
+      <div class="side-controls right">
+        <button class="control-btn" id="zoom-in" data-tooltip="Mărește textul">
+          <i data-lucide="zoom-in"></i>
+        </button>
+        <button class="theme-toggle" data-tooltip="Schimbă tema">
+          <i data-lucide="moon"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="zoom-out"
+          data-tooltip="Micșorează textul"
+        >
+          <i data-lucide="zoom-out"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="fullscreen-toggle"
+          data-tooltip="Comută ecran complet"
+        >
+          <i data-lucide="maximize"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="lectia-13.js"></script>
+    <script src="quiz-modal.js"></script>
+  </body>
+</html>
