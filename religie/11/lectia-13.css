@@ -428,6 +428,48 @@ body {
   opacity: 0.8;
 }
 
+/* Stilizare pentru termeni cheie */
+.key-term {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  padding: 0 1px; /* Padding lateral minim */
+  transition: all 0.3s ease;
+
+  /* Configurarea gradientului pentru text */
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Tema luminoasă (default) */
+:root .key-term {
+  background-image: linear-gradient(90deg, #4f46e5, #8b5cf6);
+}
+
+/* Tema întunecată */
+.dark .key-term {
+  background-image: linear-gradient(90deg, #a78bfa, #ec4899);
+}
+
+/* Efect hover - intensificare și glow usor */
+.key-term:hover {
+  transform: translateY(-1px);
+}
+
+:root .key-term:hover {
+  background-image: linear-gradient(90deg, #6366f1, #9333ea);
+  text-shadow: 0 0 8px rgba(79, 70, 229, 0.3);
+}
+
+.dark .key-term:hover {
+  background-image: linear-gradient(90deg, #c4b5fd, #f472b6);
+  text-shadow: 0 0 8px rgba(167, 139, 250, 0.5);
+}
+
 /* Theme toggle */
 [data-lucide] {
   stroke: var(--text-color);
