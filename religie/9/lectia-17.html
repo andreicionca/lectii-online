@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="ro" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecția 17</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"
+    />
+    <link rel="stylesheet" href="lectia-17.css" />
+    <link rel="stylesheet" href="quiz-modal.css" />
+
+    <link
+      rel="icon"
+      href="../../assets/favicon_lessons.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <audio id="backgroundMusic" loop>
+      <source
+        src="../../assets/music/Traditional Arabic Music.mp3"
+        type="audio/mp3"
+      />
+    </audio>
+    <div class="app-container">
+      <!-- Ecran de start -->
+      <div id="error-container" class="hidden"></div>
+      <div class="welcome-screen">
+        <button class="start-btn">Începe lecția</button>
+      </div>
+
+      <!-- Ecran cu titlu mare -->
+      <div class="title-screen hidden">
+        <div class="title-wrapper">
+          <h1 class="title"></h1>
+        </div>
+      </div>
+
+      <!-- Bara de navigație -->
+      <div class="nav-bar hidden">
+        <h1 class="nav-title"></h1>
+      </div>
+
+      <!-- Vizualizare teleprompter -->
+      <div class="teleprompter-view hidden">
+        <div class="content-container">
+          <!-- Începutul conținutului -->
+          <ul>
+            <div class="paragraph">
+              <span class="key-term">Învierea lui Iisus</span> este evenimentul
+              central al credinței creștine. Astăzi vom explora momentele
+              cruciale de la răstignirea lui Iisus până la arătările Sale după
+              înviere.
+            </div>
+          </ul>
+
+          <h2 class="subtitle">Răstignirea și îngroparea</h2>
+          <div class="paragraph">
+            <span class="key-term">Într-o zi de vineri</span>, într-un colț al
+            Ierusalimului se petrece eveniment care avea să schimbe cursul
+            istoriei pentru totdeauna. Cu câteva ore înainte de cea mai
+            importată sărbătoare din an pentru evrei, în oraș se auzea zumzetul
+            pregătirilor pentru Paștele evreiesc (Pesah), ce urma să înceapă la
+            apusul soarelui.
+          </div>
+
+          <div class="paragraph">
+            Pesah era o sărbătoare sfântă pentru evrei, comemorând eliberarea
+            strămoșilor lor din sclavia egipteană, o poveste de speranță și
+            salvare.
+          </div>
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="Ce vârstă avea Iisus când a fost răstignit?"
+              data-option1="35 de ani"
+              data-option2="30 de ani"
+              data-option3="33 de ani"
+              data-correct="3"
+            >
+              <span class="quiz-button-text">Testează-ți cunoștințele</span>
+            </button>
+          </div>
+          <div class="paragraph">
+            În acea zi, la ceasul al treilea (ora 9 dimineața), pe dealul
+            Golgotei, Iisus din Nazaret a fost răstignit. La ora 3 după-amiaza
+            (ceasul al nouălea), a strigat:
+            <div class="blockquote">
+              <div class="blockquote-text">
+                Tată, în mâinile Tale Îmi încredințez duhul!
+              </div>
+            </div>
+            și a murit. În acel moment, majoritatea apostolilor săi erau
+            ascunși, temându-se că vor avea aceeași soartă.
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-17/rastignirea.jpg"
+              alt="Răstignirea lui Iisus"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Răstignirea lui Iisus pe dealul Golgota
+            </div>
+          </div>
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="Ce a spus Iisus înainte să moară pe cruce?"
+              data-option1="Tată, în mâinile Tale îmi dau duhul"
+              data-option2="Pocăiți-vă, căci Împărăția lui Dumnezeu este aproape"
+              data-option3="Eu sunt calea, adevărul și viața"
+              data-correct="1"
+            >
+              <span class="quiz-button-text">Testează-ți cunoștințele</span>
+            </button>
+          </div>
+
+          <div class="paragraph">
+            <span class="key-term">Iosif din Arimateea</span>, un membru
+            respectat al Sinedriului și ucenic secret al lui Iisus, împreună cu
+            <span class="key-term">Nicodim</span>, au coborât trupul lui Iisus
+            de pe cruce. L-au înfășurat într-un giulgiu curat și l-au pus
+            într-un mormânt nou, săpat în stâncă.
+          </div>
+          <div
+            class="video-placeholder"
+            data-type="youtube"
+            data-src="pv1oh-a-gQM&t=125s"
+          ></div>
+          <div class="image-caption">
+            "Coborârea de pe cruce" (1435) - un exemplu remarcabil al artei
+            religioase care ilustrează realismul emoțional și atenția la detalii
+            caracteristice pictorului flamand Rogier van der Weyden
+          </div>
+
+          <div class="paragraph">
+            Mormântul era situat într-o grădină aproape de locul răstignirii. O
+            piatră mare a fost rostogolită la intrarea mormântului.
+          </div>
+          <div class="image-container">
+            <img
+              src="assets/lectia-17/mormantul.jpg"
+              alt="Mormântul lui Iisus"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Mormântul lui Iisus, situat în apropierea Golgotei
+            </div>
+          </div>
+          <div class="image-container">
+            <img
+              src="assets/lectia-17/mormantul-v2.jpg"
+              alt="Mormântul lui Iisus"
+              class="figure-image"
+            />
+            <div class="image-caption">Iisus în mormânt</div>
+          </div>
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="Cine a ajutat la îngroparea lui Iisus?"
+              data-option1="Petru și Ioan"
+              data-option2="Nicodim și Iosif din Arimateea"
+              data-option3="Maria Magdalena și Marta"
+              data-correct="2"
+            >
+              <span class="quiz-button-text">Testează-ți cunoștințele</span>
+            </button>
+          </div>
+          <div class="paragraph">
+            Autoritățile evreiești au cerut lui Pilat să securizeze mormântul,
+            temându-se ca nu cumva ucenicii lui Iisus să fure trupul și să
+            pretindă că a înviat. Pilat a trimis soldați romani care au pus un
+            sigiliu pe piatră și apoi au rămas acolo păzi mormântul.
+          </div>
+          <div class="image-container">
+            <img
+              src="assets/lectia-17/sigiliul.jpg"
+              alt="Sigiliul de la mormânt"
+              class="figure-image"
+            />
+            <div class="image-caption">Sigiliul și paza soldaților</div>
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-17/golgota-azi.jpg"
+              alt="Biserica Sfântului Mormânt și Golgota azi"
+              class="figure-image"
+            />
+            <span class="image-caption">
+              Biserica Sfântului Mormânt și Golgota azi, Ierusalim</span
+            >
+          </div>
+          <h2 class="subtitle">Descoperirea mormântului gol</h2>
+          <div class="image-container">
+            <img
+              src="assets/lectia-17/femei-mormant.jpg"
+              alt="Femeile mironosițe mergând la mormântul lui Iisus"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Femeile mironosițe mergând la mormântul lui Iisus în dimineața
+              Învierii
+            </div>
+          </div>
+          <div class="paragraph">
+            În prima zi a săptămânii (duminica), dis-de-dimineață,
+            <span class="key-term">Maria Magdalena</span> și alte femei
+            <span class="key-term">mironosițe</span> au venit la mormânt aducând
+            miresme pentru a unge trupul lui Iisus. Ele au găsit piatra
+            răsturnată și mormântul gol. Un înger le-a apărut și le-a spus:
+            <div class="blockquote">
+              <div class="blockquote-text">Nu este aici, a înviat!</div>
+            </div>
+          </div>
+          <div class="image-container">
+            <img
+              src="assets/lectia-17/aparitia-ingerului.jpg"
+              alt="Apariția îngerului la mormântul lui Iisus"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Apariția îngerului - Femeile mironosițe primind vestea Învierii
+            </div>
+          </div>
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="În ce zi a săptămânii a fost răstignit Iisus?"
+              data-option1="Duminică"
+              data-option2="Joi"
+              data-option3="Vineri"
+              data-correct="3"
+            >
+              <span class="quiz-button-text">Testează-ți cunoștințele</span>
+            </button>
+          </div>
+          <div class="paragraph">
+            Când Maria Magdalena le-a spus apostolilor despre mormântul gol,
+            Petru și Ioan au alergat să vadă. Au găsit mormântul gol, cu
+            giulgiul pus deoparte, dar încă nu înțelegeau pe deplin ce se
+            întâmplase.
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-17/petru-ioan-mormant.jpg"
+              alt="Petru și Ioan la mormântul lui Iisus"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Petru și Ioan la mormântul lui Iisus
+            </div>
+          </div>
+          <!-- Intrebare modala quiz tip text -->
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="Cui aparținea mormântul în care a fost pus Iisus?"
+              data-option1="Nicodim"
+              data-option2="Iosif din Arimateea"
+              data-option3="Pilat"
+              data-correct="2"
+            >
+              <span class="quiz-button-text">Testează-ți cunoștințele</span>
+            </button>
+          </div>
+
+          <h2 class="subtitle">Arătările lui Iisus</h2>
+
+          <div class="paragraph">
+            După înviere, Iisus s-a arătat mai multor persoane, confirmând
+            realitatea învierii Sale:
+          </div>
+
+          <ul class="content-list">
+            <li>
+              <strong>Mariei Magdalena</strong>, prima persoană care L-a văzut
+              înviat. Iisus i-a spus să meargă și să vestească apostolilor
+            </li>
+
+            <li>
+              <strong>Ucenicilor de pe drumul Emausului</strong>, care L-au
+              recunoscut când a frânt pâinea
+            </li>
+
+            <li>
+              <strong>Apostolilor în camera încuiată</strong>, cărora le-a
+              arătat rănile Sale
+            </li>
+
+            <li>
+              <strong>Lui Toma</strong>, care atunci când L-a văzut înviat a
+              exclamat:
+              <span class="key-term">„Domnul meu și Dumnezeul meu!"</span>
+            </li>
+
+            <li>
+              <strong>Pe țărmul Mării Tiberiadei</strong>, când apostolii
+              pescuiau
+            </li>
+          </ul>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-17/necredinta-lui-toma.jpg"
+              alt="Necredința lui Toma"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Necredința lui Toma (Caravaggio, 1602)
+            </div>
+          </div>
+
+          <!-- Intrebare modala quiz tip text -->
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="Ce a spus Toma când a văzut rănile lui Iisus?"
+              data-option1="Cred acum că ai înviat!"
+              data-option2="Domnul meu și Dumnezeul meu!"
+              data-option3="Iartă-mă pentru că nu am crezut!"
+              data-correct="2"
+            >
+              <span class="quiz-button-text">Testează-ți cunoștințele</span>
+            </button>
+          </div>
+
+          <div class="paragraph">
+            Timp de <span class="key-term">40 de zile</span> după învierea Sa,
+            Iisus a continuat să se arate apostolilor și să-i învețe despre
+            Împărăția lui Dumnezeu. Aceste apariții i-au transformat din oameni
+            temători în martori plini de curaj.
+          </div>
+          <div class="image-container">
+            <img
+              src="assets/lectia-17/iisus-apostoli.jpg"
+              alt="Iisus se arată apostolilor după înviere"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Iisus se arată apostolilor și le vorbește despre Împărăția lui
+              Dumnezeu
+            </div>
+          </div>
+
+          <div class="paragraph">
+            În final, pe Muntele Măslinilor, Iisus i-a binecuvântat pe apostoli
+            și le-a dat <span class="key-term">Marea Trimitere</span>:
+            <div class="blockquote">
+              <div class="blockquote-text">
+                Drept aceea, mergând, învăţaţi toate neamurile, botezându-le în
+                numele Tatălui şi al Fiului şi al Sfântului Duh, învăţându-le să
+                păzească toate câte v-am poruncit vouă, şi iată Eu cu voi sunt
+                în toate zilele, până la sfârşitul veacului. Amin.
+              </div>
+              <span class="blockquote-author">Matei 28, 19-20</span>
+            </div>
+            După aceea, s-a înălțat la cer în fața lor.
+          </div>
+          <div class="image-container">
+            <img
+              src="assets/lectia-17/marea-trimitere.jpg"
+              alt="Iisus dă apostolilor Marea Trimitere"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Iisus binecuvântează apostolii înainte de Înălțare
+            </div>
+          </div>
+          <!-- Intrebare modala quiz tip text -->
+
+          <h2 class="subtitle">Semnificația Învierii</h2>
+
+          <div class="paragraph">
+            Învierea lui Iisus este temelia credinței creștine și are multiple
+            semnificații:
+          </div>
+
+          <ul class="content-list">
+            <li>Confirmă că Iisus este cu adevărat Fiul lui Dumnezeu</li>
+            <li>Demonstrează biruința vieții asupra morții</li>
+            <li>Oferă tuturor credincioșilor speranța învierii</li>
+            <li>
+              A transformat apostolii din oameni temători în martori curajoși
+            </li>
+          </ul>
+
+          <div class="paragraph">
+            Datorită acestei transformări,
+            <span class="key-term">apostolii</span> care inițial se ascundeau au
+            devenit apoi neînfricați, predicând cu îndrăzneală învierea lui
+            Iisus. Ei au fost dispuși chiar
+            <span class="key-term">să-și dea viața</span> pentru această
+            mărturie, ceea ce demonstrează autenticitatea întâlnirii lor cu
+            Hristos cel Înviat.
+          </div>
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="Câte zile a stat Iisus pe pământ după Învierea Sa?"
+              data-option1="3 zile"
+              data-option2="40 de zile"
+              data-option3="50 de zile"
+              data-correct="2"
+            >
+              <span class="quiz-button-text">Testează-ți cunoștințele</span>
+            </button>
+          </div>
+          <div class="paragraph">
+            Învierea lui Iisus continuă să inspire milioane de oameni și astăzi.
+            Creștinii din întreaga lume sărbătoresc Paștele și se salută cu
+            cuvintele:
+            <span class="key-term">„Hristos a înviat! Adevărat a înviat!"</span>
+          </div>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-17/învierea.jpg"
+              alt="Hristos a Înviat!"
+              class="figure-image"
+            />
+            <div class="image-caption">Hristos a Înviat!</div>
+          </div>
+
+          <h2 class="subtitle">Sărbătoarea Paștelui în zilele noastre</h2>
+
+          <div class="paragraph">
+            Astăzi, creștinii ortodocși continuă să celebreze Învierea lui
+            Hristos prin ritualuri și tradiții bogate care ne leagă de aceste
+            evenimente sacre:
+          </div>
+
+          <ul class="content-list">
+            <li>
+              <span class="key-term">Slujba de Înviere</span> - În noaptea de
+              Paște, credincioșii merg la biserică pentru a participa la slujba
+              de Înviere. La miezul nopții, preotul iese din altar cu lumânarea
+              aprinsă, anunțând „Veniți de luați lumină!" și proclamând „Hristos
+              a Înviat!"
+            </li>
+
+            <div class="image-container">
+              <img
+                src="assets/lectia-17/slujba-înviere.jpg"
+                alt="Preotul anunță Veniți de luați lumină"
+                class="figure-image"
+              />
+              <div class="image-caption">Bisericile în noaptea de Înviere</div>
+            </div>
+            <li>
+              <span class="key-term">Procesiunea pascală</span> - După ce
+              primesc lumina, credincioșii înconjoară biserica în procesiune,
+              simbolizând cele trei zile în care Iisus a stat în mormânt.
+            </li>
+
+            <li>
+              <span class="key-term">Lumânările de Paște</span> - Lumânarea
+              reprezintă lumina lui Hristos care a biruit întunericul morții.
+              Credincioșii duc această lumină acasă, încercând să o păstreze
+              aprinsă pe tot drumul.
+            </li>
+
+            <li>
+              <span class="key-term">Salutul pascal</span> - Timp de 40 de zile
+              după Paște, creștinii se salută cu „Hristos a Înviat!" și răspund
+              „Adevărat a Înviat!", amintindu-și unii altora de acest eveniment
+              central al credinței.
+            </li>
+          </ul>
+
+          <div class="paragraph">
+            <span class="key-term">Masa de Paște</span> este un moment important
+            de comuniune familială. Pe masa de Paște se pun:
+          </div>
+
+          <ul class="content-list">
+            <li>
+              <strong>Ouăle roșii</strong> - Simbolizează sângele lui Hristos și
+              noul început. Există tradiția de a ciocni ouăle, spunând „Hristos
+              a Înviat!" și „Adevărat a Înviat!"
+            </li>
+
+            <li>
+              <strong>Pasca</strong> - Un cozonac special, adesea în formă
+              rotundă cu cruce deasupra, reprezentând pâinea binecuvântată
+            </li>
+
+            <li>
+              <strong>Mielul</strong> - Simbolizează jertfa lui Iisus, „Mielul
+              lui Dumnezeu"
+            </li>
+
+            <li>
+              <strong>Cozonacul</strong> - Un desert tradițional care se împarte
+              cu familia și prietenii
+            </li>
+          </ul>
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="Câte zile după Paște se folosește salutul „Hristos a Înviat!"
+              data-option1="O săptămână"
+              data-option2="30 de zile"
+              data-option3="40 de zile"
+              data-correct="3"
+            >
+              <span class="quiz-button-text">Testează-ți cunoștințele</span>
+            </button>
+          </div>
+
+          <div class="paragraph">
+            Toate aceste tradiții ne ajută să participăm la
+            <span class="key-term">bucuria Învierii</span> și să ne amintim că,
+            așa cum apostolii au fost transformați de întâlnirea cu Hristos cel
+            Înviat, și noi putem fi transformați prin sărbătorirea acestui
+            eveniment sfânt. Paștele nu este doar comemorarea unui eveniment
+            istoric din trecut, ci o realitate vie care continuă să inspire și
+            să schimbe vieți.
+          </div>
+          <div class="image-container">
+            <img
+              src="assets/lectia-17/biserica-sf-mormant.jpg"
+              alt="Biserica Sfântului Mormânt din Ierusalim"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Biserica Sfântului Mormânt din Ierusalim
+            </div>
+          </div>
+          <div
+            class="video-placeholder"
+            data-type="youtube"
+            data-src="S8WMvekTVDI&t=49s"
+          ></div>
+
+          <!-- Intrebare modala quiz tip text final -->
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="Care este semnificația centrală a Învierii lui Iisus?"
+              data-option1="Demonstrează puterea Sa de a face minuni"
+              data-option2="Arată biruința vieții asupra morții"
+              data-option3="Dovedește că era un bun învățător"
+              data-correct="2"
+            >
+              <span class="quiz-button-text">Testează-ți cunoștințele</span>
+            </button>
+          </div>
+          <!-- sfârșitul conținutului -->
+        </div>
+      </div>
+      <!-- Selector student -->
+      <div class="student-selector hidden">
+        <div
+          class="student-card"
+          data-tooltip="Apasă tasta 'e' sau ➔ pentru a alege următorul elev"
+        >
+          <div class="student-name"></div>
+        </div>
+      </div>
+
+      <!-- Controale laterale -->
+      <div class="side-controls left hidden">
+        <button
+          class="control-btn"
+          id="speed-down"
+          data-tooltip="Micșorează viteza de redare"
+        >
+          <i data-lucide="rewind"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="play-pause"
+          data-tooltip="Pornește/Pauză"
+        >
+          <i data-lucide="play"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="speed-up"
+          data-tooltip="Mărește viteza de redare"
+        >
+          <i data-lucide="fast-forward"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="sound-toggle"
+          data-tooltip="Pornește sunetul (M)"
+        >
+          <i data-lucide="volume-x"></i>
+        </button>
+      </div>
+
+      <div class="side-controls right">
+        <button class="control-btn" id="zoom-in" data-tooltip="Mărește textul">
+          <i data-lucide="zoom-in"></i>
+        </button>
+        <button class="theme-toggle" data-tooltip="Schimbă tema">
+          <i data-lucide="moon"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="zoom-out"
+          data-tooltip="Micșorează textul"
+        >
+          <i data-lucide="zoom-out"></i>
+        </button>
+        <button
+          class="control-btn"
+          id="fullscreen-toggle"
+          data-tooltip="Comută ecran complet"
+        >
+          <i data-lucide="maximize"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="lectia-17.js"></script>
+    <script src="quiz-modal.js"></script>
+  </body>
+</html>

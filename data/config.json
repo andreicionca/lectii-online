@@ -76,10 +76,10 @@
         "path": "/religie/9/lectia-1.html"
       },
       {
-        "id": "lectia-2",
-        "name": "Lecția 2",
-        "title": "Creștinismul",
-        "path": "/religie/9/lectia-2.html"
+        "id": "lectia-17",
+        "name": "Lecția 17",
+        "title": "Învierea Domnului",
+        "path": "/religie/9/lectia-17.html"
       }
     ],
     "Religie clasa a X-a": [
@@ -148,6 +148,12 @@
         "name": "Lecția 1",
         "title": "Personalități religioase",
         "path": "/religie/cultura-generala/lectia-1.html"
+      },
+      {
+        "id": "lectia-13",
+        "name": "Lecția 13",
+        "title": "Islamul - apariție și dezvoltare",
+        "path": "/religie/11/lectia-13.html"
       }
     ],
     "Testare platforma": [
