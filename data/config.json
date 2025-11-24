@@ -174,6 +174,50 @@
 
   "students": {
     "9A": [
+      "Achim Andrei",
+      "Ardelean Maria",
+      "Băban Ioana",
+      "Bălan Andreea",
+      "Bodea David",
+      "Câmpean Luca",
+      "Chințe Alina",
+      "Ciurdaș Ana",
+      "Duma Robert",
+      "Fetche Luiza",
+      "Fodor Bianca",
+      "Ianoș Adrian",
+      "Lupan Gabriel",
+      "Manea David"
+    ],
+    "9 B": [
+      "Băltan Paul Bogdan",
+      "Bărbos Andrei Dorin",
+      "Bila Luca Vlad",
+      "Biro Cristian Aaron",
+      "Bledea Răzvan Cristian",
+      "Borca Alexandru-Radu",
+      "Brezovski Emanuel",
+      "Coman Tudor Bogdan",
+      "Cozma Florin Nicolas",
+      "Gavriş Matei Mihai",
+      "Hosu Ionuţ Ștefan",
+      "Luka Cătălin Antonio",
+      "Mihăilă Rareş Ştefan",
+      "Moga Andreea Ioana",
+      "Mureşan Filip",
+      "Mureşan Luca Darius",
+      "Nica Aniela Maria",
+      "Nistor Sebastian Vlad",
+      "Piştea Tudor Ioan",
+      "Pop Sebastian David",
+      "Racz Robert",
+      "Szika Adam Istvan",
+      "Tiecar Ioan",
+      "Vancea Alexandru Petru",
+      "Vîcla Lucas Darius",
+      "Zoicaș Eduardo Filipe"
+    ],
+    "10A": [
       "Bălănean Luca",
       "Bîrlea Lucas",
       "Butean Darius",
@@ -200,7 +244,7 @@
       "Valuța Cătălina",
       "Vaszita Lukacs"
     ],
-    "9B": [
+    "10B": [
       "Andreian Bogdan",
       "Ardusătan Răzvan",
       "Bance Irina",
@@ -226,7 +270,7 @@
       "Timoce David",
       "Vlășan Alexandru"
     ],
-    "9C": [
+    "10C": [
       "Bălan Marcel",
       "Ban Daniel",
       "Belbe Denis",
@@ -253,7 +297,7 @@
       "Simion Nicolas",
       "Szigeti Andreea"
     ],
-    "9D": [
+    "10D": [
       "Băban Marius",
       "Balazs Ștefan",
       "Bilici Dumitru",
@@ -280,7 +324,7 @@
       "Smicală Rareș",
       "Verdeș Codruța"
     ],
-    "9E": [
+    "10E": [
       "Bode Raul",
       "Boga Andrei",
       "Conț Vlăduț",
@@ -306,7 +350,7 @@
       "Talpoș Lorena",
       "Turcu Kevin"
     ],
-    "9F": [
+    "10F": [
       "Acsay Andrei",
       "Bani Sara",
       "Bud Darius",
@@ -324,7 +368,7 @@
       "Tămâian Marcel",
       "Teglaș Alex"
     ],
-    "10A": [
+    "11A": [
       "Baltoș Florentina",
       "Bârlea Mario",
       "Bodnar Cătălin",
@@ -351,7 +395,7 @@
       "Temeș Iuliana",
       "Unguraș Sebastian"
     ],
-    "10B": [
+    "11B": [
       "Achim Tudor",
       "Bărbos Mihai",
       "Bonaț Luca",
@@ -375,7 +419,7 @@
       "Tițu Rareș",
       "Todosiciuc Adela"
     ],
-    "10C": [
+    "11C": [
       "Berintan Melisa",
       "Buie Andrei",
       "Covaci Elisa",
@@ -397,7 +441,7 @@
       "Tămaş Paul",
       "Vanciu Paul"
     ],
-    "10D": [
+    "11D": [
       "Apetrei George",
       "Balazs David",
       "Demeter Ruben",
@@ -422,7 +466,7 @@
       "Tarța Alexandru",
       "Verdeș Laurențiu"
     ],
-    "10E": [
+    "11E": [
       "Andrei Andreea",
       "Boroș Carina",
       "Chințe Debora",
@@ -448,7 +492,7 @@
       "Rusu Darius",
       "Urda Dalida"
     ],
-    "10F": [
+    "11F": [
       "Anton Alexandru",
       "Apan Mihaela",
       "Axante Nicolas",
@@ -467,7 +511,7 @@
       "Rohnean Rianna",
       "Vidinariu Luca"
     ],
-    "11A": [
+    "12A": [
       "Aseujan Alexandru",
       "Bindiu Oana",
       "Coza Darius",
@@ -492,7 +536,7 @@
       "Todea Erik",
       "Trif Dănuț"
     ],
-    "11B": [
+    "12B": [
       "Babici Florin",
       "Bancoș Raul",
       "Boitor Darius",
@@ -512,7 +556,7 @@
       "Stuleanec Nicolau",
       "Toth Claudiu"
     ],
-    "11C": [
+    "12C": [
       "Benea Laurenţiu",
       "Boitor Ștefan",
       "Bumbuk Luca",
@@ -531,7 +575,7 @@
       "Țăranu Teodor",
       "Zahu Matei"
     ],
-    "11D": [
+    "12D": [
       "Blomstein Mădălina",
       "Borș Gabriela",
       "Budea Adriana",
@@ -556,7 +600,7 @@
       "Tarța Cristian",
       "Tyukodi Alexandru"
     ],
-    "11E": [
+    "12E": [
       "Bejan David",
       "Belea Ionuț",
       "Bușecan Teodora",
@@ -576,97 +620,6 @@
       "Sabou Bogdan",
       "Șimori Amalia",
       "Ungur Ionuț"
-    ],
-    "12A": [
-      "Avram Darius",
-      "Bancoș Alisia",
-      "Boldan Mihai",
-      "Câmpean Darius",
-      "Chiș Carlo",
-      "Curtuiușan Luca",
-      "Lauran Raul",
-      "Marchiș Darius",
-      "Mortocean Sara",
-      "Negrea Alexandru",
-      "Oanța Raluca",
-      "Pașca Ioan",
-      "Pop Alex",
-      "Pop Andrei",
-      "Pop Diana",
-      "Sălăjan Victoraș",
-      "Știmpar Rareș",
-      "Tinc Sergiu"
-    ],
-    "12B": [
-      "Ardelean Alexandra",
-      "Balogh Raul",
-      "Bărbos Tudor",
-      "Călăuz Ioan",
-      "Chințe Alina",
-      "Ciocan Darius",
-      "Dărăban Cristian",
-      "Ferenczi Peter",
-      "Florean Ciprian",
-      "Florian Sebastian",
-      "Horje Lorena",
-      "Inoan Irimie",
-      "Ionce Darius",
-      "Lupan Gabriel",
-      "Mariţa Bogdan",
-      "Mateșan Paul",
-      "Moisa Yannis",
-      "Ponde Luca",
-      "Pop Sergiu",
-      "Rad Dănuț",
-      "Rusu Fabio",
-      "Silaghi Marin",
-      "Tătar Ionuț",
-      "Vădan Bogdan"
-    ],
-    "12C": [
-      "Ardelean Aris",
-      "Balog Darius",
-      "Budu Alexandru",
-      "Ciceu Alexandru",
-      "Costin Dalia",
-      "Danciu Daniela",
-      "Fetche Luiza",
-      "Ianoș Adrian",
-      "Libotean Marius",
-      "Meszaros-David Raul",
-      "Mudaci Simona",
-      "Nan Alexandra",
-      "Ogroniciuc Matei",
-      "Pal Răzvan",
-      "Pogăciaș Raul",
-      "Pop Cristian",
-      "Pusok Alexandra",
-      "Ravagnani Carlo",
-      "Ștef Rareș",
-      "Stupar Leonard",
-      "Tinc Adina",
-      "Tocaciu Ștefănuț",
-      "Voicu Victoria"
-    ],
-    "12D": [
-      "Balint Nicolae",
-      "Buciuman Diana",
-      "Demian Răzvan",
-      "Dumitrache Daria",
-      "Gogea Andrei",
-      "Grad Cristian",
-      "Hoban Andrei",
-      "Iloc Adina",
-      "Lupșe Emanuel",
-      "Man Elisei",
-      "Moyș Flaviu",
-      "Oșan Daniel",
-      "Perța Șimon",
-      "Pop David",
-      "Prună Ionuț",
-      "Șofrac Darius",
-      "Toader Adrian",
-      "Udroiu Mircea"
     ]
   },
 
