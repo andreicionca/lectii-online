@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ro" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecția 2</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"
+    />
+    <link rel="stylesheet" href="lectia-2.css" />
+    <link rel="stylesheet" href="quiz-modal.css" />
+
+    <link rel="icon" href="../../assets/favicon_lessons.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <audio id="backgroundMusic" loop>
+      <source
+        src="../../assets/music/Traditional gregorian chant - O filii et filiae.mp3"
+        type="audio/mp3"
+      />
+    </audio>
+    <div class="app-container">
+      <!-- Ecran de start -->
+      <div id="error-container" class="hidden"></div>
+      <div class="welcome-screen">
+        <button class="start-btn">Începe lecția</button>
+      </div>
+
+      <!-- Ecran cu titlu mare -->
+      <div class="title-screen hidden">
+        <div class="title-wrapper">
+          <h1 class="title"></h1>
+        </div>
+      </div>
+
+      <!-- Bara de navigație -->
+      <div class="nav-bar hidden">
+        <h1 class="nav-title"></h1>
+      </div>
+
+      <!-- Vizualizare teleprompter -->
+      <div class="teleprompter-view hidden">
+        <div class="content-container">
+          <div class="paragraph">
+            Țara Sfântă este cunoscută în Sfânta Scriptură sub mai multe nume:
+          </div>
+
+          <ul class="content-list">
+            <li>
+              <span class="key-term">Canaan</span> – denumire veche, folosită în Vechiul Testament;
+            </li>
+            <li>
+              <span class="key-term">Pământul Făgăduinței</span> – pământul promis de Dumnezeu lui
+              Avraam și urmașilor săi;
+            </li>
+            <li>
+              <span class="key-term">Țara Sfântă</span> – numele folosit mai ales în Noul Testament
+              și în tradiția creștină.
+            </li>
+          </ul>
+          <div class="paragraph">
+            Denumirea de Țara Sfântă a fost dată pentru că acest teritoriu este considerat
+            <span class="key-term">sacru/sfânt</span> de toate religiile monoteiste: creștinism,
+            iudaism și islamism.
+          </div>
+
+          <div class="paragraph">În această lecție vom descoperi:</div>
+
+          <ul class="content-list">
+            <li>unde se află <span class="key-term">Țara Sfântă</span> pe hartă;</li>
+            <li>cum era <span class="key-term">împărțit teritoriul</span> în vremea lui Iisus;</li>
+            <li>cum trăiau <span class="key-term">evreii de rând</span>;</li>
+            <li>cum arăta <span class="key-term">viața religioasă</span> a poporului evreu;</li>
+            <li>
+              ce legătură există între <span class="key-term">Israelul biblic</span> și
+              <span class="key-term">statul Israel de astăzi</span>.
+            </li>
+          </ul>
+
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="De ce se numește acest teritoriu „Țara Sfântă”?"
+              data-option1="Pentru că are multe râuri cu apă sfințită"
+              data-option2="Pentru că este considerat sacru de mai multe religii"
+              data-option3="Pentru că este cel mai mare stat din lume"
+              data-correct="2"
+            >
+              <span class="quiz-button-text">Testează-ți cunoștințele. Apasă aici!</span>
+            </button>
+          </div>
+
+          <h2 class="subtitle">Unde se află Țara Sfântă?</h2>
+
+          <div class="paragraph">Din punct de vedere geografic:</div>
+
+          <ul class="content-list">
+            <li>este situată în <span class="key-term">Orientul Apropiat</span>;</li>
+            <li>
+              se află la <span class="key-term">intersecția</span> dintre Africa, Asia și Europa;
+            </li>
+            <li>
+              astăzi corespunde în mare parte
+              <span class="key-term">statului modern Israel</span> și teritoriilor învecinate.
+            </li>
+          </ul>
+          <div class="image-container">
+            <img
+              src="assets/lectia-2/harta-israel-googlemaps.jpg"
+              alt="Localizarea Israelului pe harta Orientului Mijlociu"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Localizarea Israelului în Orientul Mijlociu (Google Maps)
+            </div>
+          </div>
+
+          <h2 class="subtitle">Dicționar 📚</h2>
+
+          <ul class="content-list">
+            <li>
+              <span class="key-term">iudaism</span> – religia poporului evreu; mai este numit și
+              <span class="key-term">mozaism</span>.
+            </li>
+            <li>
+              <span class="key-term">islamism</span> – religia musulmanilor, întemeiată de profetul
+              <span class="key-term">Mahomed</span> în secolul al VII-lea.
+            </li>
+            <li>
+              <span class="key-term">monoteist</span> – care crede într-un
+              <strong>singur Dumnezeu</strong>.
+            </li>
+          </ul>
+
+          <h2 class="subtitle">Poporul evreu și Mântuitorul Hristos</h2>
+
+          <div class="paragraph">
+            În Țara Sfântă au trăit de-a lungul timpului numeroase
+            <span class="key-term">persoane sfinte</span> și s-au petrecut evenimente importante
+            atât în <span class="key-term">Vechiul Testament</span>, cât și în
+            <span class="key-term">Noul Testament</span>.
+          </div>
+          <div class="image-container">
+            <img
+              src="assets/lectia-2/preoti-scribi-farisei.png"
+              alt="Preoți, farisei și învățători ai Legii în vremea Mântuitorului"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Preoți, farisei și învățători ai Legii – reprezentare stilizată
+            </div>
+          </div>
+
+          <ul class="content-list">
+            <li>
+              Locuitorii acestui pământ se numesc
+              <span class="key-term">evrei</span> sau <span class="key-term">iudei</span>.
+            </li>
+            <li>
+              <span class="key-term">Mântuitorul Iisus Hristos</span> S-a născut în mijlocul acestui
+              popor și a trăit pe aceste meleaguri.
+            </li>
+            <li>
+              El este Cel care a marcat pentru totdeauna
+              <span class="key-term">istoria și identitatea</span> Țării Sfinte.
+            </li>
+          </ul>
+
+          <div class="blockquote">
+            <div class="blockquote-text">Eu sunt Calea, Adevărul și Viața.</div>
+            <span class="blockquote-author">Ioan 14, 6</span>
+          </div>
+
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="Cum se numesc locuitorii Țării Sfinte în vremea Mântuitorului?"
+              data-option1="Greci"
+              data-option2="Egipteni"
+              data-option3="Evrei sau iudei"
+              data-correct="3"
+            >
+              <span class="quiz-button-text">Testează-ți cunoștințele. Apasă aici!</span>
+            </button>
+          </div>
+
+          <h2 class="subtitle">Împărțirea Țării Sfinte în vremea lui Iisus</h2>
+
+          <div class="paragraph">
+            În vremea Mântuitorului Hristos, teritoriul Israelului era împărțit în mai multe
+            regiuni:
+          </div>
+
+          <ul class="content-list">
+            <li>
+              <span class="key-term">Galileea</span> – la nord; zonă mai bogată în vegetație, cu
+              multe sate de pescari și agricultori;
+            </li>
+            <li>
+              <span class="key-term">Samaria</span> – în centru; locuită de
+              <span class="key-term">samariteni</span>, un popor înrudit cu evreii, dar cu unele
+              diferențe religioase;
+            </li>
+            <li>
+              <span class="key-term">Iudeea</span> – la sud; aici se afla
+              <span class="key-term">Ierusalimul</span>, capitala religioasă și politică;
+            </li>
+            <li>
+              <span class="key-term">Decapolis</span> – o regiune aflată
+              <strong>dincolo de Iordan</strong>, la nord-est, cu zece orașe cu influență
+              greco-romană;
+            </li>
+            <li><span class="key-term">Perea</span> – teritoriu de la sud-est de Iordan.</li>
+          </ul>
+          <div class="image-container">
+            <img
+              src="assets/lectia-2/harta-israel-vremea-lui-iisus.png"
+              alt="Harta Israelului în vremea Mântuitorului Iisus Hristos"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Împărțirea Israelului în secolul I d.Hr.: Galileea, Samaria, Iudeea, Decapolis, Perea
+            </div>
+          </div>
+
+          <div class="paragraph">Despre Iisus știm că:</div>
+
+          <ul class="content-list">
+            <li>S-a născut în <span class="key-term">Betleem</span> (Iudeea);</li>
+            <li>Și-a petrecut copilăria în <span class="key-term">Nazaret</span> (Galileea);</li>
+            <li>
+              De aceea a fost numit și
+              <span class="key-term">Galileeanul</span> sau
+              <span class="key-term">Nazarineanul</span>.
+            </li>
+          </ul>
+
+          <div class="paragraph">
+            Activitatea Sa publică s-a desfășurat în special în
+            <span class="key-term">Galileea</span>, în locuri precum:
+          </div>
+
+          <ul class="content-list">
+            <li><span class="key-term">Cana Galileii</span> – unde a săvârșit prima minune;</li>
+            <li>
+              <span class="key-term">Capernaum</span> – oraș în care a predicat și a vindecat
+              bolnavi;
+            </li>
+            <li><span class="key-term">Muntele Tabor</span> – locul Schimbării la Față;</li>
+            <li>
+              <span class="key-term">Lacul Ghenizaret</span>, numit și
+              <span class="key-term">Marea Tiberiadei</span> – locul unde i-a chemat pe primii
+              Apostoli.
+            </li>
+          </ul>
+          <div class="image-container">
+            <img
+              src="assets/lectia-2/harta-galileea-samaria-iudea.png"
+              alt="Harta Galileei, Samariei și Iudeii în vremea Mântuitorului"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Galileea, Samaria și Iudeea – principalele regiuni ale Israelului în vremea
+              Mântuitorului
+            </div>
+          </div>
+
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="În ce regiune se află orașul Nazaret?"
+              data-option1="Iudeea"
+              data-option2="Samaria"
+              data-option3="Galileea"
+              data-correct="3"
+            >
+              <span class="quiz-button-text">Testează-ți cunoștințele. Apasă aici!</span>
+            </button>
+          </div>
+
+          <h2 class="subtitle">Râul Iordan și Marea Moartă</h2>
+
+          <div class="paragraph">
+            Un element foarte important al geografiei Țării Sfinte este
+            <span class="key-term">râul Iordan</span>.
+          </div>
+
+          <ul class="content-list">
+            <li>Izvorăște în nordul țării și curge spre sud;</li>
+            <li>Străbate <span class="key-term">Lacul Ghenizaret</span>;</li>
+            <li>Se varsă în <span class="key-term">Marea Moartă</span>.</li>
+          </ul>
+
+          <div class="paragraph">
+            În apa Iordanului a avut loc <span class="key-term">Botezul Domnului</span>, săvârșit de
+            <span class="key-term">Sfântul Ioan Botezătorul</span>.
+          </div>
+          <div class="image-container">
+            <img
+              src="assets/lectia-2/harta-iordan-relief.png"
+              alt="Harta reliefului Țării Sfinte"
+              class="figure-image"
+            />
+            <div class="image-caption">Harta reliefului Țării Sfinte</div>
+          </div>
+
+          <div class="paragraph"><span class="key-term">Marea Moartă</span> este:</div>
+
+          <ul class="content-list">
+            <li>un lac sărat, nu o mare propriu-zisă;</li>
+            <li>
+              are o concentrație foarte mare de sare, ceea ce face înotul normal aproape imposibil;
+            </li>
+            <li>
+              se află cu aproximativ <strong>427 m sub nivelul mării</strong> – unul dintre cele mai
+              joase puncte de pe suprafața Pământului.
+            </li>
+          </ul>
+          <div class="video-placeholder" data-type="youtube" data-src="OytZMFXGnz0"></div>
+
+          <h2 class="subtitle">Viața de zi cu zi a evreilor</h2>
+
+          <div class="paragraph">
+            La Nașterea Domnului, Țara Sfântă se afla sub
+            <span class="key-term">ocupația Imperiului Roman</span>.
+          </div>
+
+          <ul class="content-list">
+            <li>
+              Evreii aveau încă un <span class="key-term">rege autohton</span>, dar acesta era supus
+              Romei;
+            </li>
+            <li>
+              Populația de rând trăia destul de greu, muncind pentru
+              <span class="key-term">traiul zilnic</span> și pentru
+              <span class="key-term">taxele</span> impuse de romani.
+            </li>
+          </ul>
+          <div class="image-container">
+            <img
+              src="assets/lectia-2/zeloti-rascoala.png"
+              alt="Zeloți și evrei răsculați împotriva dominației romane"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Evrei zeloți protestând față de ocupația romană – reprezentare stilizată
+            </div>
+          </div>
+
+          <div class="paragraph">Ocupațiile de bază ale evreilor erau:</div>
+
+          <ul class="content-list">
+            <li><span class="key-term">cultivarea pământului</span> (agricultură);</li>
+            <li><span class="key-term">creșterea animalelor</span> (păstorit);</li>
+            <li>pescuitul (mai ales în Galileea);</li>
+            <li>dulgheritul;</li>
+            <li>olăritul;</li>
+            <li>țesutul;</li>
+            <li>comerțul.</li>
+          </ul>
+
+          <div class="paragraph">Casele oamenilor obișnuiți erau:</div>
+
+          <ul class="content-list">
+            <li>
+              construite din <span class="key-term">lut</span> sau
+              <span class="key-term">lemn</span>;
+            </li>
+            <li>lipite cu <span class="key-term">ipsos</span>;</li>
+            <li>cu acoperișuri <strong>plate</strong> și ușor înclinate.</li>
+          </ul>
+
+          <div class="paragraph">Acoperișurile erau folosite pentru:</div>
+
+          <ul class="content-list">
+            <li>
+              uscatul <span class="key-term">inului</span> și al
+              <span class="key-term">smochinelor</span>;
+            </li>
+            <li>odihnă, mai ales seara;</li>
+            <li>rugăciune și reculegere.</li>
+          </ul>
+          <div class="image-container">
+            <img
+              src="assets/lectia-2/casa-evreiasca-sec-I.png"
+              alt="Reconstituire 3D a unei case evreiești din secolul I"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Reconstituire a unei case evreiești din secolul I: curte, bucătărie, spațiu de locuit
+              și acoperiș din paie
+            </div>
+          </div>
+
+          <h2 class="subtitle">Viața religioasă a evreilor</h2>
+
+          <div class="paragraph">
+            Viața religioasă a poporului evreu se baza pe
+            <span class="key-term">Legea lui Moise</span>.
+          </div>
+
+          <ul class="content-list">
+            <li>
+              Centrul principal al cultului era
+              <span class="key-term">Templul din Ierusalim</span>;
+            </li>
+            <li>
+              În fiecare oraș sau sat exista câte o
+              <span class="key-term">sinagogă</span>, adică locul în care evreii se adunau pentru
+              rugăciune și pentru citirea Scripturilor;
+            </li>
+            <li>
+              La Templu slujeau <span class="key-term">preoții</span>, ajutați de
+              <span class="key-term">leviți</span>.
+            </li>
+          </ul>
+
+          <div class="image-container">
+            <img
+              src="assets/lectia-2/templu-ierusalim.png"
+              alt="Reconstrucție a Templului din Ierusalim cu Sfânta, Sfânta Sfintelor, Ulam și altarul jertfelor"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Templul din Ierusalim – Sfânta, Sfânta Sfintelor, Ulamul, altarul jertfelor și Marea
+              de aramă
+            </div>
+          </div>
+
+          <div class="paragraph">Conducerea religioasă era organizată astfel:</div>
+
+          <ul class="content-list">
+            <li><span class="key-term">arhiereul</span> – mai marele preoților;</li>
+            <li>
+              <span class="key-term">Sinedriul</span> – organismul suprem de judecată al evreilor,
+              format din bătrâni, preoți și cărturari.
+            </li>
+          </ul>
+          <div class="image-container">
+            <img
+              src="assets/lectia-2/vesminte-mare-preot.png"
+              alt="Veșmintele Marelui Preot: efod, pieptar, tunică, turban și clopoței"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Veșmintele Marelui Preot: efodul, pieptarul judecății, pietrele de onix, tunica, brâul
+              și turbanul cu placă de aur
+            </div>
+          </div>
+
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="Cum se numea organismul suprem de judecată al evreilor?"
+              data-option1="Senatul"
+              data-option2="Sinedriul"
+              data-option3="Areopagul"
+              data-correct="2"
+            >
+              <span class="quiz-button-text">Testează-ți cunoștințele. Apasă aici!</span>
+            </button>
+          </div>
+
+          <h2 class="subtitle">Sărbători importante la evrei</h2>
+
+          <div class="paragraph">Cele mai importante sărbători religioase ale evreilor erau:</div>
+
+          <ul class="content-list">
+            <li>
+              <span class="key-term">Paștile</span> – în amintirea trecerii minunate prin
+              <span class="key-term">Marea Roșie</span> și a eliberării din
+              <span class="key-term">robia Egiptului</span>;
+            </li>
+            <li>
+              <span class="key-term">Cincizecimea</span> – în amintirea primirii
+              <span class="key-term">Tablelor Legii</span> pe muntele Sinai;
+            </li>
+            <li>
+              <span class="key-term">Sărbătoarea Corturilor</span> – amintea de perioada în care
+              evreii au locuit în corturi în drumul lor spre <span class="key-term">Canaan</span>.
+            </li>
+          </ul>
+
+          <div class="paragraph">În aceste zile:</div>
+
+          <ul class="content-list">
+            <li>evreii urcau la <span class="key-term">Templul din Ierusalim</span>;</li>
+            <li>se rugau împreună;</li>
+            <li>aduceau <span class="key-term">jertfe</span> lui Dumnezeu.</li>
+          </ul>
+
+          <div class="paragraph">
+            Sărbătoarea săptămânală a evreilor era
+            <span class="key-term">Sabatul (Sâmbăta)</span> – ziua a șaptea, zi de
+            <span class="key-term">odihnă și rugăciune</span> în cinstea lui Dumnezeu, Creatorul
+            lumii.
+          </div>
+
+          <div class="paragraph">
+            <span class="key-term">Iisus Hristos</span> a respectat sărbătorile vechi evreiești, dar
+            unele dintre ele primesc în Noul Testament o
+            <span class="key-term">semnificație nouă</span>, legată de persoana și lucrarea Sa.
+          </div>
+
+          <h2 class="subtitle">Israelul de atunci și Israelul de astăzi</h2>
+
+          <div class="paragraph">
+            Astăzi, pe teritoriul vechii Țări Sfinte se află
+            <span class="key-term">statul Israel</span>, organizat ca
+            <span class="key-term">republică parlamentară</span>.
+          </div>
+
+          <ul class="content-list">
+            <li>Are o populație de aproximativ <strong>9 milioane de locuitori</strong>;</li>
+            <li>
+              Majoritatea, peste <span class="key-term">6,7 milioane</span>, sunt
+              <span class="key-term">evrei</span>;
+            </li>
+            <li>
+              Un alt grup important este format din
+              <span class="key-term">cetățeni arabi</span>, atât
+              <span class="key-term">musulmani</span>, cât și
+              <span class="key-term">creștini</span>.
+            </li>
+          </ul>
+          <div class="image-container">
+            <img
+              src="assets/lectia-2/harta-israel-europa.png"
+              alt="Localizarea Israelului în raport cu Europa, Africa și Orientul Mijlociu"
+              class="figure-image"
+            />
+            <div class="image-caption">
+              Localizarea Israelului pe hartă: între Europa, Africa și Orientul Mijlociu
+            </div>
+          </div>
+
+          <div class="paragraph">Același teritoriu este considerat sfânt de:</div>
+
+          <ul class="content-list">
+            <li>
+              <span class="key-term">creștini</span> – pentru că aici a trăit și a înviat Hristos;
+            </li>
+            <li><span class="key-term">evrei</span> – pentru că este Pământul Făgăduinței;</li>
+            <li>
+              <span class="key-term">musulmani</span> – pentru că aici se află locuri importante și
+              pentru islam.
+            </li>
+          </ul>
+
+          <div class="quiz-button-container">
+            <button
+              class="quiz-button"
+              data-question-type="text"
+              data-question="Care sunt cele trei mari religii care consideră Țara Sfântă un loc sacru?"
+              data-option1="Creștinism, iudaism și islamism"
+              data-option2="Creștinism, budism și hinduism"
+              data-option3="Iudaism, budism și taoism"
+              data-correct="1"
+            >
+              <span class="quiz-button-text">Testează-ți cunoștințele. Apasă aici!</span>
+            </button>
+          </div>
+
+          <h2 class="subtitle">Recapitulare ✏️</h2>
+
+          <div class="paragraph">
+            Țara Sfântă este un spațiu mic, dar cu o importanță uriașă pentru istoria mântuirii.
+            Aici:
+          </div>
+
+          <ul class="content-list">
+            <li>
+              S-au împlinit promisiunile lui Dumnezeu din
+              <span class="key-term">Vechiul Testament</span>;
+            </li>
+            <li>
+              S-a născut, a trăit, a murit și a înviat
+              <span class="key-term">Mântuitorul Iisus Hristos</span>;
+            </li>
+            <li>A trăit și a suferit <span class="key-term">poporul evreu</span>, poporul ales;</li>
+            <li>S-au format tradițiile religioase care influențează și astăzi întreaga lume.</li>
+          </ul>
+
+          <div class="paragraph">
+            Când citim Evanghelia sau Vechiul Testament, este util să ne imaginăm
+            <span class="key-term">locurile reale</span> în care au trăit acești oameni. Astfel,
+            Țara Sfântă nu rămâne doar un nume pe hartă, ci devine un spațiu viu, în care Dumnezeu
+            S-a arătat oamenilor.
+          </div>
+        </div>
+      </div>
+      <!-- Selector student -->
+      <div class="student-selector hidden">
+        <div
+          class="student-card"
+          data-tooltip="Apasă tasta 'e' sau ➔ pentru a alege următorul elev"
+        >
+          <div class="student-name"></div>
+        </div>
+      </div>
+
+      <!-- Controale laterale -->
+      <div class="side-controls left hidden">
+        <button class="control-btn" id="speed-down" data-tooltip="Micșorează viteza de redare">
+          <i data-lucide="rewind"></i>
+        </button>
+        <button class="control-btn" id="play-pause" data-tooltip="Pornește/Pauză">
+          <i data-lucide="play"></i>
+        </button>
+        <button class="control-btn" id="speed-up" data-tooltip="Mărește viteza de redare">
+          <i data-lucide="fast-forward"></i>
+        </button>
+        <button class="control-btn" id="sound-toggle" data-tooltip="Pornește sunetul (M)">
+          <i data-lucide="volume-x"></i>
+        </button>
+      </div>
+
+      <div class="side-controls right">
+        <button class="control-btn" id="zoom-in" data-tooltip="Mărește textul">
+          <i data-lucide="zoom-in"></i>
+        </button>
+        <button class="theme-toggle" data-tooltip="Schimbă tema">
+          <i data-lucide="moon"></i>
+        </button>
+        <button class="control-btn" id="zoom-out" data-tooltip="Micșorează textul">
+          <i data-lucide="zoom-out"></i>
+        </button>
+        <button class="control-btn" id="fullscreen-toggle" data-tooltip="Comută ecran complet">
+          <i data-lucide="maximize"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="lectia-2.js"></script>
+    <script src="quiz-modal.js"></script>
+  </body>
+</html>
